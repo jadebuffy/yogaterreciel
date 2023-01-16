@@ -1,0 +1,75 @@
+.page-jewerlies1 {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2 {
+        width: 680px;
+        background-image: url(../images/outils.png);
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 96px;
+        margin-bottom: 65px;
+    }
+
+    h3 {
+        margin-right: 12px;
+    }
+
+    article {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icone-cartes {
+        display: block;
+        width: 49px;
+        height: 69px;
+        background-image: url(../images/icone-cartes.png);
+        background-size: cover; 
+        background-position: center;
+    }
+
+    .icone-meditation{
+        display: block;
+        width: 49px;
+        height: 69px;
+        background-image: url(../images/icone-meditation.png);
+        background-size: cover; 
+        background-position: center;
+        margin-top: 10px;
+    }
+
+
+    .paragraphe p:nth-child(2) {
+        font-family: "Montserrat-Gras";
+    }
+}
+
+.t {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8%;
+}
+
+.video {
+    width: 70%;
+}
+
+.page-jewerlies2 {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2 {
+        width: 250px;
+        background-image: url(../images/bijoux.png);
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 96px;
+        margin-bottom: 65px;
+    }
+
+}

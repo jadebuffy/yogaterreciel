@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Antic";
+    src: url(../fonts/AnticDidone-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Wild";
+    src: url(../fonts/Wild-Child.ttf);
+  }
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-Gras";
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Marcellus";
+    src: url(../fonts/MarcellusSC-Regular.ttf);
+}
+
+
+.error {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error article:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    height: 480px;
+    justify-content: center;
+    margin-top: 7%;
+    margin-left: 5%;
+}
+
+.error img{
+    width: 80%;
+}
+
+.error h1, .error h2 {
+    font-family: "Antic";
+}
+
+p {
+    font-family: "Montserrat";
+}
+
+.error img:nth-child(2){
+    position: absolute;
+    z-index: -10;
+    width: 40%;
+    left: 48%;
+    top: 30%;
+}

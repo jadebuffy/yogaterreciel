@@ -1,0 +1,47 @@
+
+<h1><?php echo(get_the_title()); ?></h1>
+<p><?php the_field("price"); ?>€</p> <!--ou $price = get_field ("price"); echo($price); mais surtout pour les traitements-->
+
+<?php if(the_field("address")): ?>
+    <p><?php the_field("address"); ?></p>
+<?php else: ?>
+    <p>Aucune adresse renseignée.</p>
+<?php endif;?>
+
+<!--IMAGE-->
+<article>
+    <img src="<?php echo($image["sizes"]["medium_large"]); ?>" 
+    height="<?php echo($image["sizes"]["medium_large-height"]); ?>"
+    width="<?php echo($image["sizes"]["medium_large-width"]); ?>"
+    alt="<?php echo($image["alt"]) ?>" />
+</article>
+
+
+<!--IMAGE-->
+
+<?php
+//Sales 
+    $sales= get_pages(array(
+        'sort_order' => 'ASC',
+        'sort_column' => 'menu_order',
+        'post_status' => 'publish',
+        'parent' => $post->ID,
+        'meta_key' => '_wp_page_template',
+        'meta_value' => 'templates/page-sale.php'
+
+    ));
+    //var_dump($sales);
+?>
+<?php foreach($sales as $sale): ?>
+
+<article>
+    <p><?php echo($sale->post_title); ?> </p>
+</article>
+<?php endforeach; ?>
+
+
+<!-- pour faire les cours qu'elle peut rajouter : 2 solutions :
+            - faire une "fausse page" cours (cf vente dans le template de base) 
+            qui ensuite redirige vers la page initiale.
+            - dans acf faire un répétiteur, et en front dire que pour chaque section cours faire 
+            un bloc et faire genre une grid par ex. -->

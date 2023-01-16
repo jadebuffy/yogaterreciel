@@ -1,0 +1,72 @@
+.page-home { //préfixer pour la sélection
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+
+     h2 {
+        width: 450px;
+        background-image: url(../images/introduction.png);
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 0;
+        margin-top: 96px;
+        margin-bottom: 65px;
+    }
+
+    .cours-images h2 {
+        width: 400px;
+        background-image: url(../images/coursimage.png);
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 0;
+        margin-top: 96px;
+        margin-bottom: 65px;
+    }
+
+    .creneaux h2 {
+        width: 550px;
+        background-image: url(../images/lieux.png);
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 0;
+        margin-top: 96px;
+        margin-bottom: 65px;
+    }
+
+    .tarifs h2 {
+        width: 150px;
+        background-image: url(../images/tarifs.png);
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 0;
+        margin-top: 96px;
+        margin-bottom: 65px;
+    }
+
+   .presentation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 125px;
+    }
+
+    .paragraphe {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .calendar {
+        display: block;
+        width: 18px;
+        height: 20px;
+        background-image: url(../images/calendar.svg);
+        background-size: cover; 
+        background-position: center;
+        margin-top: 10px;
+    }
+
+}

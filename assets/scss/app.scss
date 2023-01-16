@@ -1,0 +1,16 @@
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/text';
+@import 'layout/header';
+@import 'components/sticker';
+@import 'components/button';
+@import 'pages/page-home';
+@import 'pages/page-about';
+@import 'pages/page-galerie';
+@import 'pages/page-jewerlies';
+@import 'pages/page-contact';
+@import 'layout/footer';
+@import 'layout/404';
+
+
+//compilation : sass assets/scss/app.scss:assets/css/app.css

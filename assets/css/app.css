@@ -1,0 +1,631 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  font-size: 80px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+header h2 {
+  font-size: 80px;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Wild";
+  font-size: 96px;
+}
+
+h3 {
+  font-family: "Antic";
+  font-size: 32px;
+}
+
+.head {
+  width: 100%;
+  height: 810px;
+  box-sizing: border-box;
+  background-image: url(../images/head.png);
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 2% 10%;
+  font-family: "Montserrat";
+  align-items: center;
+}
+
+.nav-menu li {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.titre {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.head h1 {
+  text-align: center;
+  font-family: "Marcellus";
+  font-size: 150px;
+  margin-top: 10px;
+  color: white;
+  margin-bottom: 0;
+}
+
+.head p {
+  text-align: center;
+  font-size: 80px;
+  margin: -20px 0 0 0;
+  font-family: "Marcellus";
+}
+
+.head div span {
+  display: flex;
+  justify-content: end;
+  margin-top: -10px;
+  margin-right: 15%;
+  text-align: right;
+  font-size: 25px;
+  font-family: "Marcellus";
+  color: white;
+}
+
+.imgfoot {
+  display: flex;
+  width: 50%;
+  margin-top: 70px;
+  margin-bottom: 14px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bouton {
+  width: 188px;
+  height: 30px;
+  background-color: #F4E6D6;
+  border: 1px solid transparent;
+  margin-top: 3%;
+}
+
+.bouton:hover {
+  cursor: pointer;
+  border: 1px solid #CAB0AC;
+  transition: ease-in-out 0.5s;
+}
+
+.page-home {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-home h2 {
+  width: 450px;
+  background-image: url(../images/introduction.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+  margin-top: 96px;
+  margin-bottom: 65px;
+}
+.page-home .cours-images h2 {
+  width: 400px;
+  background-image: url(../images/coursimage.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+  margin-top: 96px;
+  margin-bottom: 65px;
+}
+.page-home .creneaux h2 {
+  width: 550px;
+  background-image: url(../images/lieux.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+  margin-top: 96px;
+  margin-bottom: 65px;
+}
+.page-home .tarifs h2 {
+  width: 150px;
+  background-image: url(../images/tarifs.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+  margin-top: 96px;
+  margin-bottom: 65px;
+}
+.page-home .presentation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 125px;
+}
+.page-home .paragraphe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-home .calendar {
+  display: block;
+  width: 18px;
+  height: 20px;
+  background-image: url(../images/calendar.svg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+}
+
+.about article {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 125px;
+}
+
+.desc {
+  width: 48%;
+}
+
+.photo {
+  width: 48%;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+}
+
+.photo p {
+  color: #9C7973;
+  text-align: right;
+}
+
+.titre1 {
+  width: 250px;
+  background-image: url(../images/passionyoga.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+}
+
+.titre2 {
+  width: 350px;
+  background-image: url(../images/deonneparker.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+  padding-left: 10%;
+}
+
+.paragraphe {
+  margin-top: 30px;
+}
+
+.paragraphe p {
+  margin-top: 20px;
+  letter-spacing: 1, 5%;
+  line-height: 200%;
+}
+
+.paragraphe a {
+  text-decoration: none;
+  color: #9C7973;
+}
+
+.paragraphe a:hover {
+  text-decoration: underline;
+  color: #9C7973;
+}
+
+.page-gallerie {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-gallerie h2 {
+  width: 250px;
+  background-image: url(../images/gallerie.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+  margin-top: 96px;
+  margin-bottom: 65px;
+}
+.page-gallerie h3 {
+  margin-right: 12px;
+}
+.page-gallerie .icone-photo {
+  display: block;
+  width: 49px;
+  height: 69px;
+  background-image: url(../images/icone-photo.png);
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+}
+.page-gallerie .icone-video {
+  display: block;
+  width: 48px;
+  height: 75px;
+  background-image: url(../images/icone-video.png);
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+}
+.page-gallerie .t {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8%;
+}
+
+.page-jewerlies1 {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-jewerlies1 h2 {
+  width: 680px;
+  background-image: url(../images/outils.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 96px;
+  margin-bottom: 65px;
+}
+.page-jewerlies1 h3 {
+  margin-right: 12px;
+}
+.page-jewerlies1 article {
+  display: flex;
+  justify-content: space-between;
+}
+.page-jewerlies1 .icone-cartes {
+  display: block;
+  width: 49px;
+  height: 69px;
+  background-image: url(../images/icone-cartes.png);
+  background-size: cover;
+  background-position: center;
+}
+.page-jewerlies1 .icone-meditation {
+  display: block;
+  width: 49px;
+  height: 69px;
+  background-image: url(../images/icone-meditation.png);
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+}
+.page-jewerlies1 .paragraphe p:nth-child(2) {
+  font-family: "Montserrat-Gras";
+}
+
+.t {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8%;
+}
+
+.video {
+  width: 70%;
+}
+
+.page-jewerlies2 {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-jewerlies2 h2 {
+  width: 250px;
+  background-image: url(../images/bijoux.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 96px;
+  margin-bottom: 65px;
+}
+
+.page-contact h2 {
+  width: 300px;
+  background-image: url(../images/mecontacter.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 8%;
+  margin-top: 96px;
+  margin-bottom: 65px;
+}
+.page-contact article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-contact h3 {
+  margin-bottom: 8%;
+  margin-right: 12px;
+}
+.page-contact a {
+  display: flex;
+  margin-bottom: 8%;
+  font-family: "Montserrat";
+  color: black;
+  text-decoration: none;
+}
+.page-contact i {
+  margin-right: 18px;
+}
+.page-contact .title {
+  margin-bottom: 25%;
+}
+.page-contact .t {
+  display: flex;
+}
+.page-contact .icone-contact {
+  display: block;
+  width: 53px;
+  height: 21px;
+  background-image: url(../images/icone-contact.png);
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+}
+.page-contact .etsy {
+  display: block;
+  width: 18px;
+  height: 17px;
+  background-image: url(../images/etsy.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  background-image: url(../images/footer.png);
+  font-family: "Montserrat";
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+  font-size: 16px;
+  width: 100%;
+  height: 318px;
+}
+
+div.footer-contact {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w {
+  width: 45%;
+}
+
+div.footer-contact h5, div.footer-contact hr {
+  margin-top: 73px;
+}
+
+div.footer-contact h5 {
+  font-family: "Montserrat-Gras";
+  font-size: 24px;
+  margin-bottom: 42px;
+}
+
+div.footer-contact hr {
+  background-color: white;
+  border: 1px solid white;
+  width: 0.5px;
+  height: 100px;
+  margin: 73px 0 0 0;
+}
+
+.footer-contact span {
+  width: 100%;
+}
+
+.reseaux, .contacter, .footer-contact a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
+.contacter, .reseaux {
+  width: 100%;
+}
+
+footer i {
+  margin-right: 18px;
+}
+
+.tel {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/call.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.mail {
+  display: block;
+  width: 21px;
+  background-image: url(../images/mail.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.fb {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/facebook.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.insta {
+  display: block;
+  width: 18px;
+  height: 17px;
+  background-image: url(../images/instagram.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.copyright {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 99px;
+  font-size: 14px;
+  color: #424242;
+}
+
+.copyright span {
+  margin-left: 10px;
+}
+
+@font-face {
+  font-family: "Antic";
+  src: url(../fonts/AnticDidone-Regular.ttf);
+}
+@font-face {
+  font-family: "Wild";
+  src: url(../fonts/Wild-Child.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-Gras";
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "Marcellus";
+  src: url(../fonts/MarcellusSC-Regular.ttf);
+}
+.error {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error article:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  height: 480px;
+  justify-content: center;
+  margin-top: 7%;
+  margin-left: 5%;
+}
+
+.error img {
+  width: 80%;
+}
+
+.error h1, .error h2 {
+  font-family: "Antic";
+}
+
+p {
+  font-family: "Montserrat";
+}
+
+.error img:nth-child(2) {
+  position: absolute;
+  z-index: -10;
+  width: 40%;
+  left: 48%;
+  top: 30%;
+}
+
+/*# sourceMappingURL=app.css.map */

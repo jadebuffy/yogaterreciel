@@ -1,0 +1,113 @@
+footer {
+    background-image: url(../images/footer.png);
+    font-family: "Montserrat";
+    background-size: cover; 
+	background-position: center;
+    margin-top: 10px;
+    font-size: $font_small;
+    width: 100%;
+    height: 318px;
+}
+
+//LIGNE 1
+
+div.footer-contact {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.w {
+    width: 45%;
+}
+
+div.footer-contact h5, div.footer-contact hr{
+    margin-top: 73px;
+}
+
+div.footer-contact h5 {
+    font-family: "Montserrat-Gras";
+    font-size: 24px;
+    margin-bottom: 42px;
+}
+
+div.footer-contact hr {
+    background-color: white;
+    border: 1px solid white;
+    width: 0.5px;
+    height: 100px;
+    margin: 73px 0 0 0;
+}
+
+.footer-contact span {
+    width: 100%;
+}
+
+.reseaux, .contacter, .footer-contact a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+.contacter, .reseaux {
+    width: 100%;
+}
+
+footer i {
+    margin-right: 18px;
+}
+
+.tel {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/call.svg);
+    background-size: cover; 
+	background-position: center;
+}
+
+.mail {
+    display: block;
+    width: 21px;
+    background-image: url(../images/mail.svg);
+    background-size: cover;
+	background-position: center;
+}
+
+.fb {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/facebook.svg);
+    background-size: cover; 
+	background-position: center;
+}
+
+.insta {
+    display: block;
+    width: 18px;
+    height: 17px;
+    background-image: url(../images/instagram.svg);
+    background-size: cover; 
+	background-position: center;
+}
+
+//LIGNE 2
+
+.copyright {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 99px;
+    font-size: 14px;
+    color: #424242;
+}
+
+.copyright span {
+    margin-left: 10px;
+}

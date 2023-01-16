@@ -1,0 +1,46 @@
+.page-gallerie {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2 {
+        width: 250px;
+        background-image: url(../images/gallerie.png);
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 0;
+        margin-top: 96px;
+        margin-bottom: 65px;
+    }
+
+    h3 {
+        margin-right: 12px;
+    }
+
+    .icone-photo {
+        display: block;
+        width: 49px;
+        height: 69px;
+        background-image: url(../images/icone-photo.png);
+        background-size: cover; 
+        background-position: center;
+        margin-top: 10px;
+    }
+
+    .icone-video {
+        display: block;
+        width: 48px;
+        height: 75px;
+        background-image: url(../images/icone-video.png);
+        background-size: cover; 
+        background-position: center;
+        margin-top: 10px;
+    }
+
+    .t {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8%;
+    }
+}
