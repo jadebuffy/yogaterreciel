@@ -35,7 +35,7 @@
                         <a href="tel:+33620590805"><i class="tel"></i><?php echo($tel);?></a>
                     </span>
                     <span>
-                        <a href="mailto:deonne.parker@gmail.com"><i class="mail"></i><?php echo($mail);?></a>
+                        <a href="mailto:<?php the_field( 'mail' ); ?>"><i class="mail"></i><?php echo($mail);?></a>
                     </span>
                 </div>
             </div>
