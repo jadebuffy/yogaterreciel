@@ -1,3 +1,5 @@
+<title><?php wp_get_title()?></title>
+
 
 <h1><?php echo(get_the_title()); ?></h1>
 <p><?php the_field("price"); ?>€</p> <!--ou $price = get_field ("price"); echo($price); mais surtout pour les traitements-->
@@ -13,7 +15,7 @@
     <img src="<?php echo($image["sizes"]["medium_large"]); ?>" 
     height="<?php echo($image["sizes"]["medium_large-height"]); ?>"
     width="<?php echo($image["sizes"]["medium_large-width"]); ?>"
-    alt="<?php echo($image["alt"]) ?>" />
+    alt="<?php echo($image["alt"]) ?>"/>
 </article>
 
 
@@ -45,3 +47,4 @@
             qui ensuite redirige vers la page initiale.
             - dans acf faire un répétiteur, et en front dire que pour chaque section cours faire 
             un bloc et faire genre une grid par ex. -->
+
