@@ -7,7 +7,16 @@
     // Header
     get_header();
 
+    // Image
+    $image= get_field('imagefond');
+
 ?>
+<div class="image">
+    <img src="<?php echo($image["sizes"]["medium_large"]); ?>" 
+        height="<?php echo($image["sizes"]["medium_large-height"]); ?>"
+        width="<?php echo($image["sizes"]["medium_large-width"]); ?>"
+        alt="<?php echo($image["alt"]) ?>" />
+</div>
 <section class="page-home">
     <!--INTRODUCTION-->
     <h2>Introduction au yoga</h2>
@@ -16,41 +25,32 @@
         <!--HA'THA Yoga-->
         <div class="desc">
             <div class="t">
-                <h3>HA'THA</h3>
+                <h3><?php the_field("title"); ?></h3>
                 <i class="icone"></i>
             </div>
             <div class="paragraphe">
-                <p>“Ha” signifie soleil, “tha” signifie la “lune” et “yoga” signifie lier. 
-                    L’Hatha Yoga signifie l'union du soleil et de la lune.
-                    En liant le souffle, la conscience et le corps entier, vous participer dans 
-                    les polarités de votre propre système :  soleil-lune , droite-gauche, le haut 
-                    et le bas, et les aspects masculin- féminin qui existent dans chacun de nous 
-                    et dans le monde autour.</p>
+                <p><?php the_field("texte_hatha"); ?></p>
             </div>
         </div>
         <!--VIDEO-->
         <div class="video">
-            <iframe width="684" height="385" src="https://www.youtube.com/embed/52nfjRzIaj8?list=RDGMEMQ1dJ7wXfLlqCjwV0xfSNbAVMaGSKrC7dGcY" title="I'll Never Love Again (from A Star Is Born) (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="684" height="385" src="<?php the_field("video_hatha"); ?>" title="vidéo de présentation du HATHA Yoga" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </article>
     <article class="presentation">
         <!--MEDITATION GUIDEE-->
             <!--VIDEO-->
             <div class="video">
-                <iframe width="684" height="385" src="https://www.youtube.com/embed/52nfjRzIaj8?list=RDGMEMQ1dJ7wXfLlqCjwV0xfSNbAVMaGSKrC7dGcY" title="I'll Never Love Again (from A Star Is Born) (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="684" height="385" src="<?php the_field("video_med"); ?>" title="vidéo de méditation" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <!--TEXTE-->
             <div class="desc">
                 <div class="t">
-                    <h3>Méditation guidée</h3>
+                    <h3><?php the_field("title_med"); ?></h3>
                     <i class="icone"></i>
                 </div>
                 <div class="paragraphe">
-                    <p>La méditation est un outil permettant de développer une connaissance 
-                        subtile de notre corps. L’état méditatif est un cadeau. On ne le
-                         cherche pas, il vient naturellement. La méditation guidée est un 
-                         outil d’apprentissage privilégié que j’utilise dans mes cours de yoga.</p>
-                    <p>J’anime également des séances dédiées à la méditation et à son intégration dans le quotidien.</p>
+                    <p><?php the_field("texte_med"); ?></p>
                     <a href=""><button class="bouton">Plus de méditations</button></a>
                 </div>
             </div>
@@ -59,6 +59,9 @@
         <!--LE COURS EN IMAGE-->
         <h2>Les cours en image</h2>
         <!--slider-->
+        <?php
+            echo do_shortcode('[smartslider3 slider="2"]');
+        ?>
         <a href=""><button class="bouton">Plus de photos</button></a>
         
     </article>
@@ -67,7 +70,7 @@
         <h2>Lieux et horaires des cours</h2>
         <img src=""/>
         <!--GRID-->
-        <div>
+        <div class="contenu">
             <h3>Hatha flow</h3>
             <div>
                 <i class="calendar"></i>
@@ -75,14 +78,18 @@
             </div>
             <div>
                 <i class="schedule"></i>
-                <p>8h30 - 10h</p>
-                <p>1h30 de cours</p>
+                <div class="bloc">
+                    <p>8h30 - 10h</p>
+                    <p>1h30 de cours</p>
+                </div>
             </div>
             <div>
                 <i class="location"></i>
-                <p>Espace Loreka</p>
-                <a href="">14 Rue de la Leysse,<br>
+                <div class="bloc">
+                    <p>Espace Loreka</p>
+                    <a href="">14 Rue de la Leysse,<br>
                     73000 Bassens</a>
+                </div>
             </div>
         </div>
         <!--FIN GRID-->
@@ -94,27 +101,43 @@
 
         <p>Pour toutes réservations, merci de me contacter.</p>
         <!--GRID-->
-        <div class="prix">
-            <p>A l'année <?php the_field("price_year"); ?>€</p>
-            <p><?php the_field("week"); ?> cours par semaine</p>
-            <p><?php the_field("price_supp"); ?>€</p>
-            <p><?php the_field("price_part"); ?> €</p>
-        </div>
-        <div class="prix">
-            <p>Par trimestre <?php the_field("price_tri"); ?>€</p>
-            <p><?php the_field("week"); ?> cours par semaine</p>
-            <p><?php the_field("price_supp"); ?> €</p>
-            <p><?php the_field("price_part"); ?> €</p>
-        </div>
-        <div class="prix">
-            <p>A l'unité <?php the_field("price"); ?>€</p>
-            <p><?php the_field("week"); ?> cours par semaine</p>
-            <p><?php the_field("price_supp"); ?> €</p>
-            <p><?php the_field("price_part"); ?> €</p>
+        <div class="grid">
+            <div class="prix">
+                <div>
+                    <h3>Année</h3>
+                    <p><?php the_field("price_year"); ?>€/an</p>
+                </div>
+                <div>
+                    <p><?php the_field("week"); ?> cours par semaine</p>
+                    <p>créneau au choix</p>
+                    <p><?php the_field("price_supp"); ?>€</p>
+                    <p><?php the_field("price_part"); ?> €</p>
+                </div>   
+            </div>
+            <div class="prix">
+                <div>
+                    <h3>Trimestre</h3>
+                    <p><?php the_field("price_tri"); ?>€/semestre</p>
+                </div>
+                <div>
+                    <p><?php the_field("week"); ?> cours par semaine</p>
+                    <p>créneau au choix</p>
+                    <p><?php the_field("price_supp"); ?> €</p>
+                    <p><?php the_field("price_part"); ?> €</p>
+                </div>
+            </div>
+            <div class="prix">
+                <h3>A l'unité</h3>
+                <p><?php the_field("price"); ?>€/cours</p>
+                <p><?php the_field("week"); ?> cours par semaine</p>
+                <p>créneau au choix</p>
+                <p><?php the_field("price_supp"); ?> €</p>
+                <p><?php the_field("price_part"); ?> €</p>
+            </div>
         </div>
         <!--FIN GRID-->
-        <img src=""/>
     </article>
+    <img src="../wp-content/themes/yogaterreciel/assets/images/footerHome.png" class="imgfoot">
 </section>
 <?php
     // Footer
