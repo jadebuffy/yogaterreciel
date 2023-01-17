@@ -7,7 +7,11 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header class="head">
+    <?php
+        // Image
+        $image = get_field('imagefond');
+    ?>
+    <header class="head" style="background-image:url(<?php echo($image['url']); ?>);">
         <nav role="navigation" class="nav-menu">
             <?php wp_nav_menu(array('theme_location' => 'primary_menu')); ?>
         </nav>
