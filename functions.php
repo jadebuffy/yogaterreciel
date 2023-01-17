@@ -14,4 +14,9 @@
       ) );
     }
    add_action( 'after_setup_theme', 'custom_register_nav_menu', 0 );
+
+   remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
+    add_action( 'shutdown', function() {
+   while ( @ob_end_flush() );
+} );
 ?>
