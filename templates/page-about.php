@@ -8,7 +8,16 @@
     get_header();
 
     // Image
-    $image= get_field('images');
+    $image= get_field('image_py');
+    $image2= get_field('image_dp');
+
+    //Citation
+    $quote= get_field('citation_py');
+    $quote2= get_field('citation_dp');
+
+    //Texte
+    $text= get_field('texte_py');
+    $text2= get_field('texte_dp');
 
 ?>
 <section class="about">
@@ -21,23 +30,20 @@
             <!--PARAGRAPHE-->
             <div class="paragraphe">
                 <span>
-                    <h3>"The ancient wisdom of Yoga teaches that Life is already given to you, 
-                        you are completely loved, you are here now. It teaches that we are not 
-                        separate—cannot be separate—from Nature, which sustains us in a vast 
-                        interdependence with everything." </h3>
+                    <h3><?php echo($quote);?></h3>
                     <i class="iconePY"></i>
                 </span>
-                <p>Je dédie cette site à la personne qui m'a plus influencé, motivé et aider à 
-                    comprendre profondément ce qu’est le Yoga: mon professeur, <a href="https://www.heartofyoga.com/">Mark Whitwell</a>. 
-                    Je lui suis reconnaissante ainsi qu’à ses enseignants, <a href="https://en.wikipedia.org/wiki/T._K._V._Desikachar">T.K.V Desikachar</a> et 
-                    son père, <a href="https://blog.green-yoga.fr/krishnamacharya-pere-yoga-moderne/">Krishnamacharya</a>.</p>
+                <p><?php echo($text);?></p>
             </div>
         </div>
 
         <!--PHOTO-->
         <div class="photo">
-            <img src="../wp-content/themes/yogaterreciel/assets/images/MW.jpg"/>
-            <p>Mark Whitwell.</p>
+            <img src="<?php echo($image["sizes"]["medium_large"]); ?>" 
+                height="<?php echo($image["sizes"]["medium_large-height"]); ?>"
+                width="<?php echo($image["sizes"]["medium_large-width"]); ?>"
+                alt="<?php echo($image["alt"]) ?>"/>
+            <p><?php the_field("legende");?></p>
         </div>
     </article>
 
@@ -45,7 +51,10 @@
     <article>
         <!--PHOTO-->
         <div class="photo">
-            <img src="../wp-content/themes/yogaterreciel/assets/images/DP.jpg"/>
+            <img src="<?php echo($image2["sizes"]["medium_large"]); ?>" 
+                    height="<?php echo($image2["sizes"]["medium_large-height"]); ?>"
+                    width="<?php echo($image2["sizes"]["medium_large-width"]); ?>"
+                    alt="<?php echo($image2["alt"]) ?>"/>
         </div>
         <!--TEXTE-->
         <div class="desc">
@@ -54,16 +63,10 @@
             <!--PARAGRAPHE-->
             <div class="paragraphe">
                 <span>
-                    <h3>“On adapte le yoga à la personne, et pas la personne au yoga”</h3>
+                    <h3><?php echo($quote2);?></h3>
                     <i class="iconeDP"></i>
                 </span>
-                <p>Canadienne et maman de deux filles, je suis professeur d’hatha-yoga 
-                    et de méditation depuis 2008 à Chambéry et ses alentours.</p>
-                <p>M’étant apparu comme une révélation lorsque je le pratiquais en 
-                    complément du patinage artistique, j’ai continué de pratiquer 
-                    l’hatha yoga tout au long de mes études. Considérant le yoga 
-                    comme une partie de moi, je me suis alors naturellement dirigé vers
-                    l’enseignement afin de vous transmettre cette passion.</p>
+                <p><?php echo($text2);?></p>
             </div>
         </div>
     </article>
