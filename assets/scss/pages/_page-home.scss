@@ -59,6 +59,24 @@
         justify-content: space-between;
     }
 
+    .contenu {
+        width: 315px;
+        height: 351px;
+        background-color: $beige;
+        padding: 45px;
+    }
+
+    .contenu div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bloc{
+        display: flex;
+        flex-direction: column;
+    }
+
     .calendar {
         display: block;
         width: 18px;
@@ -67,6 +85,43 @@
         background-size: cover; 
         background-position: center;
         margin-top: 10px;
+    }
+
+    .schedule {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/schedule.svg);
+        background-size: cover; 
+        background-position: center;
+        margin-top: 10px;
+    }
+
+    .location {
+        display: block;
+        width: 16px;
+        height: 20px;
+        background-image: url(../images/location.svg);
+        background-size: cover; 
+        background-position: center;
+        margin-top: 10px;
+    }
+
+    .grid {
+        display: flex;
+        gap: 40px;
+    }
+
+    .prix {
+        display: block;
+        background-color: $mauve;
+        padding: 36px;
+    }
+
+    .image {
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
 }
