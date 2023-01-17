@@ -6,10 +6,6 @@
 
     // Header
     get_header();
-
-    // Image
-    $image= get_field('imagefond');
-
 ?>
 <div class="image">
     <img src="<?php echo($image["sizes"]["medium_large"]); ?>" 
@@ -34,14 +30,18 @@
         </div>
         <!--VIDEO-->
         <div class="video">
-            <iframe width="684" height="385" src="<?php the_field("video_hatha"); ?>" title="vidéo de présentation du HATHA Yoga" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <video controls width=100%>
+                <source src="<?php the_field("video_hatha"); ?>" type="video/mp4">
+            </video>
         </div>
     </article>
     <article class="presentation">
         <!--MEDITATION GUIDEE-->
             <!--VIDEO-->
             <div class="video">
-                <iframe width="684" height="385" src="<?php the_field("video_med"); ?>" title="vidéo de méditation" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <video controls width=100%>
+                <source src="<?php the_field("video_med"); ?>" type="video/mp4">
+            </video>
             </div>
             <!--TEXTE-->
             <div class="desc">
@@ -70,28 +70,35 @@
         <h2>Lieux et horaires des cours</h2>
         <img src=""/>
         <!--GRID-->
-        <div class="contenu">
-            <h3>Hatha flow</h3>
-            <div>
-                <i class="calendar"></i>
-                <p>Lundi matin</p>
-            </div>
-            <div>
-                <i class="schedule"></i>
-                <div class="bloc">
-                    <p>8h30 - 10h</p>
-                    <p>1h30 de cours</p>
+        <?php if( have_rows( 'creneaux_cours' ) ): ?>
+        <div class="creneaux_cours">
+            <?php while ( have_rows( 'creneaux_cours' ) ) : the_row(); ?>
+            <div class="contenu">
+                <div class="name">
+                    <h3><?php the_sub_field( 'name' );?></h3>
+                </div>
+                <div class="champ">
+                    <i class="calendar"></i>
+                    <p><?php the_sub_field( 'creneaux' ); ?></p>
+                </div>
+                <div class="champ">
+                    <i class="schedule"></i>
+                    <div class="bloc">
+                        <p><?php the_sub_field( 'horaire' ); ?></p>
+                        <p><?php the_sub_field( 'duree' ); ?></p>
+                    </div>
+                </div>
+                <div class="champ">
+                    <i class="location"></i>
+                    <div class="bloc">
+                        <p><?php the_sub_field( 'place' ); ?></p>
+                        <a href="<?php the_sub_field( 'url_address' ); ?>" target="_blank"><?php the_sub_field( 'address' ); ?></a>
+                    </div>
                 </div>
             </div>
-            <div>
-                <i class="location"></i>
-                <div class="bloc">
-                    <p>Espace Loreka</p>
-                    <a href="">14 Rue de la Leysse,<br>
-                    73000 Bassens</a>
-                </div>
-            </div>
+            <?php endwhile; ?>
         </div>
+        <?php endif; ?>
         <!--FIN GRID-->
         <img src=""/>
     </article>
@@ -101,40 +108,82 @@
 
         <p>Pour toutes réservations, merci de me contacter.</p>
         <!--GRID-->
-        <div class="grid">
+        <div class="creneaux_cours">
             <div class="prix">
-                <div>
+                <div class="top">
                     <h3>Année</h3>
+                    <p><?php the_field("note_year"); ?></p>
                     <p><?php the_field("price_year"); ?>€/an</p>
                 </div>
-                <div>
-                    <p><?php the_field("week"); ?> cours par semaine</p>
-                    <p>créneau au choix</p>
-                    <p><?php the_field("price_supp"); ?>€</p>
-                    <p><?php the_field("price_part"); ?> €</p>
+                <div class="block">
+                    <div>
+                        <i class="calendar"></i>
+                        <p><?php the_field("week"); ?> cours par semaine</p>
+                    </div>
+                    <div>
+                        <i class="schedule"></i>
+                        <p>créneau au choix</p>
+                    </div>
+                    <div>
+                        <i class="money"></i>
+                        <p><?php the_field("price_supp"); ?>€ par cours supplémentaire</p>
+                    </div>
+                    <div>
+                        <i class="money"></i>
+                        <p><?php the_field("price_part"); ?> € pour un cours particulier</p>
+                    </div>
                 </div>   
             </div>
             <div class="prix">
-                <div>
+                <div class="top">
                     <h3>Trimestre</h3>
+                    <p><?php the_field("note_tri"); ?></p>
                     <p><?php the_field("price_tri"); ?>€/semestre</p>
                 </div>
-                <div>
-                    <p><?php the_field("week"); ?> cours par semaine</p>
-                    <p>créneau au choix</p>
-                    <p><?php the_field("price_supp"); ?> €</p>
-                    <p><?php the_field("price_part"); ?> €</p>
+                <div class="block">
+                    <div>
+                        <i class="calendar"></i>
+                        <p><?php the_field("week"); ?> cours par semaine</p>
+                    </div>
+                    <div>
+                        <i class="schedule"></i>
+                        <p>créneau au choix</p>
+                    </div>
+                    <div>
+                        <i class="money"></i>
+                        <p><?php the_field("price_supp"); ?> € par cours supplémentaire</p>
+                    </div>
+                    <div>
+                        <i class="money"></i>
+                        <p><?php the_field("price_part"); ?> € pour un cours particulier</p>
+                    </div>
                 </div>
             </div>
             <div class="prix">
-                <h3>A l'unité</h3>
-                <p><?php the_field("price"); ?>€/cours</p>
-                <p><?php the_field("week"); ?> cours par semaine</p>
-                <p>créneau au choix</p>
-                <p><?php the_field("price_supp"); ?> €</p>
-                <p><?php the_field("price_part"); ?> €</p>
+                <div class="top">
+                    <h3>A l'unité</h3>
+                    <p><?php the_field("note"); ?></p>
+                    <p><?php the_field("price"); ?>€/cours</p>
+                </div>
+                <div class="block">
+                    <div>
+                        <i class="calendar"></i>
+                        <p><?php the_field("week"); ?> cours par semaine</p>
+                    </div>
+                    <div>
+                        <i class="schedule"></i>
+                        <p>créneau au choix</p>
+                    </div>
+                    <div>
+                        <i class="money"></i>
+                        <p><?php the_field("price_part"); ?> € pour un cours particulier</p>
+                    </div>
+                </div>
             </div>
         </div>
+        <?php
+            echo do_shortcode('[wpforms id="5" title="false"]');
+        ?>
         <!--FIN GRID-->
     </article>
     <img src="../wp-content/themes/yogaterreciel/assets/images/footerHome.png" class="imgfoot">
