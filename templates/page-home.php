@@ -7,12 +7,6 @@
     // Header
     get_header();
 ?>
-<div class="image">
-    <img src="<?php echo($image["sizes"]["medium_large"]); ?>" 
-        height="<?php echo($image["sizes"]["medium_large-height"]); ?>"
-        width="<?php echo($image["sizes"]["medium_large-width"]); ?>"
-        alt="<?php echo($image["alt"]) ?>" />
-</div>
 <section class="page-home">
     <!--INTRODUCTION-->
     <h2>Introduction au yoga</h2>
@@ -105,8 +99,7 @@
     <article class="tarifs">
         <!--TARIFS-->
         <h2>Tarifs</h2>
-
-        <p>Pour toutes réservations, merci de me contacter.</p>
+        <p class="p">Pour toutes réservations, merci de me <a href="#">contacter.</a></p>
         <!--GRID-->
         <div class="creneaux_cours">
             <div class="prix">
