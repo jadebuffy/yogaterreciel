@@ -4,7 +4,7 @@
                     <h5>Me contacter</h5>
                     <div class="contacter">
                         <span> 
-                            <a href="tel:+33620590805"><i class="tel"></i>06 20 59 08 05</a>
+                            <a href="tel:+33620590805"><i class="tel"></i><?php the_field("num"); ?></a>
                         </span>
                         <span>   
                             <a href="mailto:deonne.parker@gmail.com"><i class="mail"></i>deonne.parker@gmail.com</a>
@@ -25,9 +25,9 @@
                 </div>
             </div>
             <div class="copyright">
-                <span>Deonne Parker</span>
                 <span>&copy;<?php echo(date('Y')); ?></span>
                 <span>Tous droits réservés</span>
+                <span><a href="">Mentions légales</a></span>
             </div>
         </footer>
         <?php wp_footer();?>
