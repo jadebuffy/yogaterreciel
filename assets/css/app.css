@@ -75,6 +75,9 @@ h3 {
 
 .nav-menu {
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .nav-menu ul {
@@ -97,7 +100,7 @@ h3 {
 
 .nav-menu a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .current-menu-item {
@@ -273,6 +276,17 @@ h3 {
   margin-top: 96px;
   margin-bottom: 65px;
 }
+.page-home .tarifs .p {
+  text-align: center;
+  margin-bottom: 37px;
+}
+.page-home .p a {
+  text-decoration: none;
+  color: #9C7973;
+}
+.page-home .p a:hover {
+  text-decoration: underline;
+}
 .page-home .prix {
   display: block;
   background-color: #DFCEF0;
@@ -293,21 +307,24 @@ h3 {
   font-size: 20px;
   font-family: "Antic";
 }
-.page-home .top .money {
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin-right: 5%;
-  background-image: url(../images/schedule.svg);
-  background-size: cover;
-  background-position: center;
-}
 .page-home .block p {
   display: flex;
   width: 100%;
   height: 70px;
   flex-direction: column;
   justify-content: space-between;
+}
+.page-home .block div {
+  display: flex;
+}
+.page-home .money {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5%;
+  background-image: url(../images/money.svg);
+  background-size: cover;
+  background-position: center;
 }
 .page-home .presentation {
   display: flex;
@@ -433,6 +450,38 @@ h3 {
   align-items: center;
   margin-bottom: 8%;
 }
+.page-gallerie article {
+  height: auto;
+}
+.page-gallerie .gallerie {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10%;
+}
+.page-gallerie .acf-gallery {
+  max-width: 100%;
+  margin: 40px auto 0 auto;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 14px;
+}
+.page-gallerie .acf-gallery li {
+  list-style-type: none;
+  height: 250px;
+  flex-grow: 1;
+}
+.page-gallerie .acf-gallery li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.page-gallerie .gallerie_video {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 85px;
+}
 
 .page-jewerlies1 {
   width: 85%;
@@ -454,6 +503,7 @@ h3 {
 .page-jewerlies1 article {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .page-jewerlies1 .icone-cartes {
   display: block;
@@ -559,7 +609,7 @@ h3 {
 }
 
 footer {
-  background-image: url(../images/footer.png);
+  background-image: url(../images/footer.jpg);
   font-family: "Montserrat";
   background-size: cover;
   background-position: center;
