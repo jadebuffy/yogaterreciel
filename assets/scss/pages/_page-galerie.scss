@@ -2,6 +2,7 @@
     width: 85%;
     margin-left: auto;
     margin-right: auto;
+    
 
     h2 {
         width: 250px;
@@ -43,4 +44,47 @@
         align-items: center;
         margin-bottom: 8%;
     }
+
+    //GALLERIE PHOTO
+
+    article {
+        height: auto;
+    }
+
+    .gallerie {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 10%;
+    }
+
+    .acf-gallery {
+        max-width: 100%;
+        margin: 40px auto 0 auto;
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0 14px;
+    }
+    
+    .acf-gallery li {
+        list-style-type: none;
+        height: 250px;
+        flex-grow: 1;
+    }
+    
+    .acf-gallery li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    //GALLERIE VIDEO
+
+    .gallerie_video {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 85px;
+    }
+    
 }
