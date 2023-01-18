@@ -18,5 +18,10 @@
    remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
     add_action( 'shutdown', function() {
    while ( @ob_end_flush() );
-} );
+    } );
+
+  
+  // Ajouter une taille d'image
+  add_image_size( 'gallery-thumb', 1200, 800, true );
+    
 ?>
