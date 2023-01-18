@@ -123,6 +123,20 @@
         margin-bottom: 65px;
     }
 
+    .tarifs .p {
+        text-align: center;
+        margin-bottom: 37px;
+    }
+
+    .p a {
+        text-decoration: none;
+        color: $taupefonce;
+    }
+
+    .p a:hover {
+        text-decoration: underline;
+    }
+
     .prix {
         display: block;
         background-color: $mauve;
@@ -147,15 +161,6 @@
             font-family: "Antic";
         }
 
-        .money {
-            display: block;
-            width: 20px;
-            height: 20px;
-            margin-right: 5%;
-            background-image: url(../images/schedule.svg);
-            background-size: cover; 
-            background-position: center;
-        }
     }
 
 
@@ -165,6 +170,20 @@
         height: 70px;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .block div {
+        display: flex;
+    }
+
+    .money {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 5%;
+        background-image: url(../images/money.svg);
+        background-size: cover; 
+        background-position: center;
     }
 
    .presentation {
