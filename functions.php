@@ -4,9 +4,11 @@
     function add_style() {
         wp_enqueue_style('app', get_template_directory_uri() . '../assets/css/app.css', false);
       }
+      function add_script() {
+        wp_enqueue_script('app', get_template_directory_uri() . '../assets/js/script.js', false);
+      }
       add_action( 'wp_enqueue_scripts', 'add_style' );
     // wp_enqueue_style('app', get_template_directory_uri().'', array(), 1, 'all'); 
-
 
     function custom_register_nav_menu(){
       register_nav_menus( array(
@@ -19,6 +21,25 @@
     add_action( 'shutdown', function() {
    while ( @ob_end_flush() );
     } );
+
+    //FOOTER MODIFIABLE
+    if( function_exists('acf_add_options_page') ) {
+    
+      acf_add_options_page(array(
+          'page_title'    => 'Theme General Settings',
+          'menu_title'    => 'Theme Settings',
+          'menu_slug'     => 'theme-general-settings',
+          'capability'    => 'edit_posts',
+          'redirect'      => false
+      ));
+      
+      acf_add_options_sub_page(array(
+          'page_title'    => 'Theme Footer Settings',
+          'menu_title'    => 'Pied de page',
+          'parent_slug'   => 'theme-general-settings',
+      ));
+      
+  }
 
   
   // Ajouter une taille d'image

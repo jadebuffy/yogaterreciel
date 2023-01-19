@@ -15,7 +15,7 @@
     }
 
     .cours-images h2 {
-        width: 400px;
+        width: 450px;
         background-image: url(../images/coursimage.png);
         background-size: contain; 
         background-repeat: no-repeat;
@@ -25,7 +25,40 @@
         margin-bottom: 65px;
     }
 
+    .cours-images a {
+        margin-left: 80%;
+    }
+
+    .icone-HATHA {
+        display: block;
+        width: 57px;
+        height: 56px;
+        margin-right: 5%;
+        background-image: url(../images/hathayoga.png);
+        background-size: cover; 
+        background-position: center;
+    }
+
+    .icone-med {
+        display: block;
+        width: 63px;
+        height: 74px;
+        margin-right: 5%;
+        background-image: url(../images/icone-meditation.png);
+        background-size: cover; 
+        background-position: center;     
+    }
+
     //CRENEAUX
+
+    .creneaux img {
+        display: flex;
+        width: 40%;
+        margin-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .creneaux h2 {
         width: 550px;
         background-image: url(../images/lieux.png);
@@ -45,6 +78,7 @@
         .contenu {
             background-color: $beige;
             padding: 45px;
+            border-radius: 5px;
         }
 
         .name {
@@ -63,6 +97,7 @@
         .bloc{
             display: flex;
             flex-direction: column;
+            width: 85%;
         }
 
         .bloc p{
@@ -72,11 +107,11 @@
         a {
             font-family: "Montserrat";
             color: black;
-            text-decoration: none;
+            text-decoration: underline;
         }
 
         a:hover{
-            text-decoration: underline;
+            text-decoration: none;
         }
     
         .calendar {
@@ -140,6 +175,7 @@
     .prix {
         display: block;
         background-color: $mauve;
+        border-radius: 5px;
         padding: 36px;
     }
 
@@ -157,7 +193,7 @@
         }
 
         p:nth-child(3){
-            font-size: 20px;
+            font-size: 25px;
             font-family: "Antic";
         }
 
@@ -166,7 +202,7 @@
 
     .block p {
         display: flex;
-        width: 100%;
+        width: 85%;
         height: 70px;
         flex-direction: column;
         justify-content: space-between;

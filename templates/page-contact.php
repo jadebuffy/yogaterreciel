@@ -15,7 +15,7 @@
     $mail= get_field('mail');
 
 ?>
-<section class="page-contact">
+<section class="page-contact" id="contact">
     <h2>Me contacter</h2>
     <article>
         <div class="photo">
@@ -55,7 +55,7 @@
             </div>
         </div>
     </article>
-    <img src="../wp-content/themes/yogaterreciel/assets/images/footerContact.png" class="imgfoot">
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerContact.png" class="imgfoot">
 </section>
 
 <?php

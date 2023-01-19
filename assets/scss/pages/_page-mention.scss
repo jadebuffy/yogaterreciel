@@ -1,0 +1,237 @@
+.page-mention {
+    margin-bottom: 7%;
+    .back{
+        width:23%;
+        padding-left: 105px;
+        padding-top: 86px;
+     }
+  
+     
+      
+      .image-container::after {
+        content: "Mentions legales";
+        position: absolute;
+        padding-left: 105px;
+        padding-top: 60px;
+        left: 18px;
+        color: black;
+        font-size: 96px;
+        font-family: 'Wild', sans-serif;
+      }
+
+
+      .intro{
+        padding-left: 113px;
+        padding-right: 113px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        line-height: 23px;
+        font-family: 'Montserrat';
+        font-size: 18px;
+      }
+
+
+      h3{
+        font-family: 'Antic', serif;
+        font-size: 32px;
+      }
+
+      .block1{
+        padding-left: 113px;
+        padding-top: 10px;
+      }
+
+      .block2{
+        padding-left: 113px;
+        
+      }
+
+
+      .p{
+        padding-right: 105px;
+        font-family: 'Montserrat';
+
+      }
+
+      .hidden {
+        display: none;
+        font-family: 'Montserrat';
+        padding-right: 113px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        line-height: 23px;
+      }
+
+      /* Add styles for the arrow image */
+      .arrow {
+        cursor: pointer;
+        width: 30px;
+        height: 18px;
+        margin-left: 23%;
+        transition: transform 0.2s;
+        transform-origin: center center; 
+      }
+      .arrow2 {
+        cursor: pointer;
+        width: 30px;
+        height: 18px;
+        margin-left: 66%;
+        transition: transform 0.2s;
+        transform-origin: center center; 
+      }
+      
+      .arrow3 {
+        cursor: pointer;
+        width: 30px;
+        height: 18px;
+        margin-left: 67%;
+        transition: transform 0.2s;
+        transform-origin: center center; 
+      }
+
+      .arrow4 {
+        cursor: pointer;
+        width: 30px;
+        height: 18px;
+        margin-left: 55.5%;
+        transition: transform 0.2s;
+        transform-origin: center center; 
+      }
+
+      .arrow5 {
+        cursor: pointer;
+        width: 30px;
+        height: 18px;
+        margin-left: 65.5%;
+        transition: transform 0.2s;
+        transform-origin: center center; 
+      }
+
+      .line {
+        width: 75%;
+        border-bottom: 1px solid #9C7973;
+        margin: 10px auto;
+      }
+      
+
+
+
+
+
+      @media only screen and (max-width: 600px) {
+        .block1, .block2 {
+          width: 90%;
+          margin: 0 auto;
+        }
+
+        .intro{
+          padding-left: 30px;
+          padding-right: 30px;
+          font-family: 'Montserrat';
+          font-size: 18px;
+        }
+
+        
+        h3 {
+          font-size: 20px;
+        }
+
+        .back{
+          padding-top: 1.5%;
+          width:45%;
+          padding-left: 30px;
+          padding-top: 45px;
+
+       }
+
+
+
+        .image-container::after {
+          content: "Mentions legales";
+          position: absolute;
+          padding-left: 30px;
+          padding-top: 30px;
+          left: 18px;
+          color: black;
+          font-size: 60px;
+          font-family: 'Wild', sans-serif;
+        }
+
+        .h3{
+          font-family: 'Antic', serif;
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+
+        .block1{
+          padding-left: 30px;
+          padding-top: 10px;
+        }
+  
+        .block2{
+          padding-left: 30px;
+          
+        }
+
+        .p{
+          padding-right: 105px;
+          font-family: 'Montserrat';
+          font-size: 18px;
+          
+  
+        }
+
+        .arrow {
+          cursor: pointer;
+          width: 15px;
+          height: 9px;
+          margin-left: 43%;
+          transition: transform 0.2s;
+          transform-origin: center center; 
+        }
+
+        .arrow2 {
+          cursor: pointer;
+          width: 15px;
+          height: 9px;
+          margin-left: 53%;
+          transition: transform 0.2s;
+          transform-origin: center center; 
+        }
+
+        .arrow3 {
+          cursor: pointer;
+          width: 15px;
+          height: 9px;
+          margin-left: 56%;
+          transition: transform 0.2s;
+          transform-origin: center center; 
+        }
+
+        .arrow4 {
+          cursor: pointer;
+          width: 15px;
+          height: 9px;
+          margin-left: 27.5%;
+          transition: transform 0.2s;
+          transform-origin: center center; 
+        }
+  
+        .arrow5 {
+          cursor: pointer;
+          width: 15px;
+          height: 9px;
+          margin-left: 51.5%;
+          transition: transform 0.2s;
+          transform-origin: center center; 
+        }
+
+        .hidden {
+          display: none;
+          font-family: 'Montserrat';
+          padding-right: 30px;
+        }
+
+    }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="pop">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +8,34 @@
     <title><?php echo(get_the_title()); ?></title>
     <?php wp_head(); ?>
 </head>
+<?php
+
+    /*
+        Template Name: Formulaire
+    */
+?>
 <body>
-    <?php
-        // Image
-        $image = get_field('imagefond');
-    ?>
-    <header class="head" style="background-image:url(<?php echo($image['url']); ?>); width: 100%; 
-    height: 810px;
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-	background-size: cover; 
-	background-position: center;">
+    <header class="head">
         <nav role="navigation">
             <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg">
             <div class="nav-menu">
                 <?php wp_nav_menu(array('theme_location' => 'primary_menu')); ?>
             </div>
         </nav>
-        <div class="titre">
-            <h1>Yoga<br><p>Terre-Ciel</p></h1>
-            <span>Chambéry</span>
-        </div>
     </header>
-    
+    <section class="page-form">
+        <div class="formulaire">
+            <h3>Je suis intéressé.e</h3>
+            <p>
+                Laissez moi vos coordonnées, et je vous recontacterais.
+            </p>
+            <?php
+                echo do_shortcode('[wpforms id="5" title="false"]');
+            ?>
+        </div>
+    </section>
+<?php
+    // Footer
+    get_footer();
+
+?>

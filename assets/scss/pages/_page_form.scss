@@ -1,0 +1,64 @@
+.pop {
+    background-color: $taupe;
+}
+
+.page-form {
+    width: 85%;
+    margin: 5% auto;
+
+    .form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .formulaire {
+        background-color: rgba($color: white, $alpha: 0.7);
+        width: 40%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 20px;
+    }
+
+    .champs {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 4%;
+        color: $grisfonce;
+        font-size: 14px;
+    }
+
+    label {
+        font-family: 'Montserrat';
+        font-size: 12px;
+    }
+
+    div.wpforms-container-full .wpforms-form input[type=email], 
+    div.wpforms-container-full .wpforms-form input[type=number], 
+    div.wpforms-container-full .wpforms-field.wpforms-field-select-style-classic select {
+        border: 2px solid $taupe;
+        font-family: 'Montserrat';
+        font-size: 14px;
+    }
+
+    .wpforms-field-description {
+        font-family: 'Montserrat';
+        font-size: 8px;
+    }
+
+    div.wpforms-container-full .wpforms-form input[type=submit], 
+    div.wpforms-container-full .wpforms-form button[type=submit], 
+    div.wpforms-container-full .wpforms-form .wpforms-page-button {
+        background-color: $taupe;
+        font-family: 'Antic';
+        border-radius: 2px;
+    }
+}

@@ -11,7 +11,7 @@
     $image= get_field('images');
 
 ?>
-<section class="page-gallerie">
+<section class="page-gallerie" id="photo">
     <h2>Un aperçu</h2>
     <article>
         <div class="t">
@@ -47,14 +47,14 @@
             <?php while ( have_rows( 'gallerie_video' ) ) : the_row(); ?>
             <div class="videos">
                 <video controls width=100%>
-                    <source src="<?php the_field("videos");?>" type="video/mp4">
+                    <source src="<?php the_sub_field( 'videos' );?>" type="video/mp4">
                 </video>
             </div>
             <?php endwhile; ?>
         </div>
         <?php endif; ?>
     </article>
-    <img src="../wp-content/themes/yogaterreciel/assets/images/footerGallerie.png" class="imgfoot">
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerGallerie.png" class="imgfoot">
 </section>   
     
 

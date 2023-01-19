@@ -1,10 +1,12 @@
-.about article{
-    display: flex;
-    justify-content: space-between;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 125px;
+.page-about {
+    article{
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 125px;
+    }
 }
 
 .desc {
@@ -13,6 +15,9 @@
 
 .photo {
     width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .photo img {
@@ -65,5 +70,26 @@
 .paragraphe a:hover {
     text-decoration: underline;
     color:$taupefonce;
+}
+
+.iconeDP {
+    display: block;
+    width: 92px;
+    height: 49px;
+    background-image: url(../images/citationDP.png);
+    background-size: cover; 
+    background-position: center;
+}
+
+.iconePY{
+    display: block;
+    position: absolute;
+    left: 47%;
+    width: 23px;
+    height: 25px;
+    background-image: url(../images/citationMW.png);
+    background-size: cover; 
+    background-position: center;
+
 }
 

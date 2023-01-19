@@ -73,19 +73,33 @@ h3 {
   font-size: 32px;
 }
 
-.nav-menu {
+h4 {
+  font-family: "Antic";
+  font-size: 18px;
+  margin-top: 2%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(2px);
+  background-color: rgba(119, 119, 119, 0.1);
+  backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(2px);
+}
+
+.nav-menu {
+  display: block;
+  width: 70%;
+  margin-left: 6%;
 }
 
 .nav-menu ul {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: 3% 10%;
-  height: 20px;
+  padding: 3% 0;
+  height: auto;
   font-family: "Montserrat";
   align-items: center;
 }
@@ -94,7 +108,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  height: 25px;
+  height: auto;
   font-size: 20px;
 }
 
@@ -162,6 +176,7 @@ h3 {
   background-color: #F4E6D6;
   border: 1px solid transparent;
   margin-top: 3%;
+  border-radius: 2px;
 }
 
 .bouton:hover {
@@ -186,7 +201,7 @@ h3 {
   margin-bottom: 65px;
 }
 .page-home .cours-images h2 {
-  width: 400px;
+  width: 450px;
   background-image: url(../images/coursimage.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -194,6 +209,34 @@ h3 {
   margin-left: 0;
   margin-top: 96px;
   margin-bottom: 65px;
+}
+.page-home .cours-images a {
+  margin-left: 80%;
+}
+.page-home .icone-HATHA {
+  display: block;
+  width: 57px;
+  height: 56px;
+  margin-right: 5%;
+  background-image: url(../images/hathayoga.png);
+  background-size: cover;
+  background-position: center;
+}
+.page-home .icone-med {
+  display: block;
+  width: 63px;
+  height: 74px;
+  margin-right: 5%;
+  background-image: url(../images/icone-meditation.png);
+  background-size: cover;
+  background-position: center;
+}
+.page-home .creneaux img {
+  display: flex;
+  width: 40%;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .page-home .creneaux h2 {
   width: 550px;
@@ -213,6 +256,7 @@ h3 {
 .page-home .creneaux_cours .contenu {
   background-color: #F4E6D6;
   padding: 45px;
+  border-radius: 5px;
 }
 .page-home .creneaux_cours .name {
   margin-bottom: 30px;
@@ -227,6 +271,7 @@ h3 {
 .page-home .creneaux_cours .bloc {
   display: flex;
   flex-direction: column;
+  width: 85%;
 }
 .page-home .creneaux_cours .bloc p {
   margin-bottom: 5%;
@@ -234,10 +279,10 @@ h3 {
 .page-home .creneaux_cours a {
   font-family: "Montserrat";
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .page-home .creneaux_cours a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .page-home .creneaux_cours .calendar {
   display: block;
@@ -290,6 +335,7 @@ h3 {
 .page-home .prix {
   display: block;
   background-color: #DFCEF0;
+  border-radius: 5px;
   padding: 36px;
 }
 .page-home .top {
@@ -304,12 +350,12 @@ h3 {
   font-size: 13px;
 }
 .page-home .top p:nth-child(3) {
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Antic";
 }
 .page-home .block p {
   display: flex;
-  width: 100%;
+  width: 85%;
   height: 70px;
   flex-direction: column;
   justify-content: space-between;
@@ -343,7 +389,7 @@ h3 {
   left: 0;
 }
 
-.about article {
+.page-about article {
   display: flex;
   justify-content: space-between;
   width: 85%;
@@ -358,6 +404,9 @@ h3 {
 
 .photo {
   width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .photo img {
@@ -407,6 +456,26 @@ h3 {
 .paragraphe a:hover {
   text-decoration: underline;
   color: #9C7973;
+}
+
+.iconeDP {
+  display: block;
+  width: 92px;
+  height: 49px;
+  background-image: url(../images/citationDP.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.iconePY {
+  display: block;
+  position: absolute;
+  left: 47%;
+  width: 23px;
+  height: 25px;
+  background-image: url(../images/citationMW.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .page-gallerie {
@@ -500,10 +569,11 @@ h3 {
 .page-jewerlies1 h3 {
   margin-right: 12px;
 }
-.page-jewerlies1 article {
+.page-jewerlies1 .med {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  margin-top: 10%;
 }
 .page-jewerlies1 .icone-cartes {
   display: block;
@@ -534,7 +604,8 @@ h3 {
 
 .video {
   width: 60%;
-  margin: auto;
+  display: flex;
+  align-items: end;
 }
 
 .page-jewerlies2 {
@@ -550,6 +621,114 @@ h3 {
   background-position: center;
   margin-top: 96px;
   margin-bottom: 65px;
+}
+.page-jewerlies2 p {
+  margin-bottom: 5%;
+}
+
+.container {
+  width: 100%;
+  /* Slider */
+}
+.container .slick-slide {
+  margin: 0px 20px;
+}
+.container .slick-slide img {
+  width: 100%;
+}
+.container .slick-slider {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.container .slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.container .slick-list:focus {
+  outline: none;
+}
+.container .slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+.container .slick-slider .slick-track,
+.container .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.container .slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.container .slick-track:before,
+.container .slick-track:after {
+  display: table;
+  content: "";
+}
+.container .slick-track:after {
+  clear: both;
+}
+.container .slick-loading .slick-track {
+  visibility: hidden;
+}
+.container .slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+.container [dir=rtl] .slick-slide {
+  float: right;
+}
+.container .slick-slide img {
+  display: block;
+}
+.container .slick-slide.slick-loading img {
+  display: none;
+}
+.container .slick-slide.dragging img {
+  pointer-events: none;
+}
+.container .slick-initialized .slick-slide {
+  display: block;
+}
+.container .slick-loading .slick-slide {
+  visibility: hidden;
+}
+.container .slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.container .slick-arrow.slick-hidden {
+  display: none;
+}
+.container .slick-arrow {
+  background-color: transparent;
+  border: 0px;
+  color: red;
+  font-size: 30px;
+}
+.container .slick-arrow:hover {
+  cursor: pointer;
 }
 
 .page-contact h2 {
@@ -606,6 +785,252 @@ h3 {
   background-image: url(../images/etsy.svg);
   background-size: cover;
   background-position: center;
+}
+
+.page-mention {
+  margin-bottom: 7%;
+  /* Add styles for the arrow image */
+}
+.page-mention .back {
+  width: 23%;
+  padding-left: 105px;
+  padding-top: 86px;
+}
+.page-mention .image-container::after {
+  content: "Mentions legales";
+  position: absolute;
+  padding-left: 105px;
+  padding-top: 60px;
+  left: 18px;
+  color: black;
+  font-size: 96px;
+  font-family: "Wild", sans-serif;
+}
+.page-mention .intro {
+  padding-left: 113px;
+  padding-right: 113px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  line-height: 23px;
+  font-family: "Montserrat";
+  font-size: 18px;
+}
+.page-mention h3 {
+  font-family: "Antic", serif;
+  font-size: 32px;
+}
+.page-mention .block1 {
+  padding-left: 113px;
+  padding-top: 10px;
+}
+.page-mention .block2 {
+  padding-left: 113px;
+}
+.page-mention .p {
+  padding-right: 105px;
+  font-family: "Montserrat";
+}
+.page-mention .hidden {
+  display: none;
+  font-family: "Montserrat";
+  padding-right: 113px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  line-height: 23px;
+}
+.page-mention .arrow {
+  cursor: pointer;
+  width: 30px;
+  height: 18px;
+  margin-left: 23%;
+  transition: transform 0.2s;
+  transform-origin: center center;
+}
+.page-mention .arrow2 {
+  cursor: pointer;
+  width: 30px;
+  height: 18px;
+  margin-left: 66%;
+  transition: transform 0.2s;
+  transform-origin: center center;
+}
+.page-mention .arrow3 {
+  cursor: pointer;
+  width: 30px;
+  height: 18px;
+  margin-left: 67%;
+  transition: transform 0.2s;
+  transform-origin: center center;
+}
+.page-mention .arrow4 {
+  cursor: pointer;
+  width: 30px;
+  height: 18px;
+  margin-left: 55.5%;
+  transition: transform 0.2s;
+  transform-origin: center center;
+}
+.page-mention .arrow5 {
+  cursor: pointer;
+  width: 30px;
+  height: 18px;
+  margin-left: 65.5%;
+  transition: transform 0.2s;
+  transform-origin: center center;
+}
+.page-mention .line {
+  width: 75%;
+  border-bottom: 1px solid #9C7973;
+  margin: 10px auto;
+}
+@media only screen and (max-width: 600px) {
+  .page-mention .block1, .page-mention .block2 {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .page-mention .intro {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Montserrat";
+    font-size: 18px;
+  }
+  .page-mention h3 {
+    font-size: 20px;
+  }
+  .page-mention .back {
+    padding-top: 1.5%;
+    width: 45%;
+    padding-left: 30px;
+    padding-top: 45px;
+  }
+  .page-mention .image-container::after {
+    content: "Mentions legales";
+    position: absolute;
+    padding-left: 30px;
+    padding-top: 30px;
+    left: 18px;
+    color: black;
+    font-size: 60px;
+    font-family: "Wild", sans-serif;
+  }
+  .page-mention .h3 {
+    font-family: "Antic", serif;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .page-mention .block1 {
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+  .page-mention .block2 {
+    padding-left: 30px;
+  }
+  .page-mention .p {
+    padding-right: 105px;
+    font-family: "Montserrat";
+    font-size: 18px;
+  }
+  .page-mention .arrow {
+    cursor: pointer;
+    width: 15px;
+    height: 9px;
+    margin-left: 43%;
+    transition: transform 0.2s;
+    transform-origin: center center;
+  }
+  .page-mention .arrow2 {
+    cursor: pointer;
+    width: 15px;
+    height: 9px;
+    margin-left: 53%;
+    transition: transform 0.2s;
+    transform-origin: center center;
+  }
+  .page-mention .arrow3 {
+    cursor: pointer;
+    width: 15px;
+    height: 9px;
+    margin-left: 56%;
+    transition: transform 0.2s;
+    transform-origin: center center;
+  }
+  .page-mention .arrow4 {
+    cursor: pointer;
+    width: 15px;
+    height: 9px;
+    margin-left: 27.5%;
+    transition: transform 0.2s;
+    transform-origin: center center;
+  }
+  .page-mention .arrow5 {
+    cursor: pointer;
+    width: 15px;
+    height: 9px;
+    margin-left: 51.5%;
+    transition: transform 0.2s;
+    transform-origin: center center;
+  }
+  .page-mention .hidden {
+    display: none;
+    font-family: "Montserrat";
+    padding-right: 30px;
+  }
+}
+
+.pop {
+  background-color: #CAB0AC;
+}
+
+.page-form {
+  width: 85%;
+  margin: 5% auto;
+}
+.page-form .form {
+  display: flex;
+  justify-content: center;
+}
+.page-form .formulaire {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 40%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 20px;
+}
+.page-form .champs {
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-form h3 {
+  text-align: center;
+}
+.page-form p {
+  text-align: center;
+  margin-top: 4%;
+  color: #777777;
+  font-size: 14px;
+}
+.page-form label {
+  font-family: "Montserrat";
+  font-size: 12px;
+}
+.page-form div.wpforms-container-full .wpforms-form input[type=email],
+.page-form div.wpforms-container-full .wpforms-form input[type=number],
+.page-form div.wpforms-container-full .wpforms-field.wpforms-field-select-style-classic select {
+  border: 2px solid #CAB0AC;
+  font-family: "Montserrat";
+  font-size: 14px;
+}
+.page-form .wpforms-field-description {
+  font-family: "Montserrat";
+  font-size: 8px;
+}
+.page-form div.wpforms-container-full .wpforms-form input[type=submit],
+.page-form div.wpforms-container-full .wpforms-form button[type=submit],
+.page-form div.wpforms-container-full .wpforms-form .wpforms-page-button {
+  background-color: #CAB0AC;
+  font-family: "Antic";
+  border-radius: 2px;
 }
 
 footer {
