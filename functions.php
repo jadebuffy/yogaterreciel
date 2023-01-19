@@ -2,10 +2,10 @@
     //load css
     //wp_enqueue_style(nom, source, dépendance, numéro de version de fichier, type de média)
     function add_style() {
-        wp_enqueue_style('app', get_template_directory_uri() . '../assets/css/app.css', false);
+        wp_enqueue_style('app', get_template_directory_uri() . '/assets/css/app.css', false);
       }
       function add_script() {
-        wp_enqueue_script('app', get_template_directory_uri() . '../assets/js/script.js', false);
+        wp_enqueue_script('app', get_template_directory_uri() . '/assets/js/script.js', false);
       }
       add_action( 'wp_enqueue_scripts', 'add_style' );
     // wp_enqueue_style('app', get_template_directory_uri().'', array(), 1, 'all'); 
