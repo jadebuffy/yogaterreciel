@@ -32,7 +32,7 @@
                 </div>
                 <div>
                     <span>
-                        <a href="tel:+33620590805"><i class="tel"></i><?php echo($tel);?></a>
+                        <a href="tel:<?php the_field( 'num' ); ?>"><i class="tel"></i><?php echo($tel);?></a>
                     </span>
                     <span>
                         <a href="mailto:<?php the_field( 'mail' ); ?>"><i class="mail"></i><?php echo($mail);?></a>
