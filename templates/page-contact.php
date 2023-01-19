@@ -26,7 +26,7 @@
         </div>
         <div class="desc">
             <div class="title">
-                <div class="t">
+                <div class="ti">
                     <h3>Deonne Parker</h3>
                     <i class="icone-contact"></i>
                 </div>
@@ -43,13 +43,15 @@
                 <h3>Retrouvez moi sur :</h3>
                 <div>
                     <span>
-                        <a href=""><i class="fb"></i><?php the_field("facebook"); ?></a>
+                        <a href="<?php the_field('fb_url'); ?>" target="_blank"><i class="fb"></i><?php the_field("facebook"); ?></a>
                     </span>
                     <span>
-                        <a href=""><i class="insta"></i><?php the_field("instagram"); ?></a>
+                        <a href="<?php the_field('insta_url'); ?>" target="_blank"><i class="insta"></i><?php the_field("instagram"); ?></a>
                     </span>
                     <span>
-                        <a href=""><i class="etsy"></i><?php the_field("etsy"); ?></a>
+                        <?php if(get_field('etsy_url') && get_field('etsy')) : ?>
+                            <a href="<?php the_field('etsy_url'); ?>" target="_blank"><i class="etsy"></i><?php the_field("etsy"); ?></a>
+                        <?php endif ?>    
                     </span>
                 </div>
             </div>

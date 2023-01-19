@@ -35,11 +35,15 @@
     <article class="presentation">
         <!--MEDITATION GUIDEE-->
             <!--VIDEO-->
-            <div class="video">
-            <video controls width=100%>
-                <source src="<?php the_field("video_med"); ?>" type="video/mp4">
-            </video>
-            </div>
+            <?php if( get_field("video_med")) : ?>
+                <div class="video">
+                    <video controls width=100%>
+                        <source src="<?php the_field("video_med"); ?>" type="video/mp4">
+                    </video>
+                </div>
+            <?php else: ?>
+                <p class="else">Contenu disponible prochainement</p>
+            <?php endif ?>
             <!--TEXTE-->
             <div class="desc">
                 <div class="t">
@@ -48,7 +52,7 @@
                 </div>
                 <div class="paragraphe">
                     <p><?php the_field("texte_med"); ?></p>
-                    <a href="http://localhost/wordpress/creations/#meditation"><button class="bouton">Plus de méditations</button></a>
+                    <a href="http://www.yoga-terre-ciel.com/creations/#meditation"><button class="bouton">Plus de méditations</button></a>
                 </div>
             </div>
     </article>
@@ -67,7 +71,7 @@
             </div>
         <?php endif; ?>
         <!--FIN SLIDER-->
-        <a href="http://localhost/wordpress/galerie/#photo"><button class="bouton">Plus de photos</button></a>
+        <a href="http://www.yoga-terre-ciel.com/galerie/#photo"><button class="bouton">Plus de photos</button></a>
         
     </article>
     <article class="creneaux">
@@ -109,7 +113,7 @@
     <article class="tarifs">
         <!--TARIFS-->
         <h2>Tarifs</h2>
-        <p class="p">Pour toutes réservations, merci de me <a href="http://localhost/wordpress/contact/#contact">contacter.</a></p>
+        <p class="p">Pour toutes réservations, merci de me <a href="http://www.yoga-terre-ciel.com/contact/#contact">contacter.</a></p>
         <!--GRID-->
         <div class="creneaux_cours">
             <div class="prix">
@@ -184,9 +188,6 @@
                 </div>
             </div>
         </div>
-        <?php
-            echo do_shortcode('[wpforms id="5" title="false"]');
-        ?>
         <!--FIN GRID-->
     </article>
     <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerHome.png" class="imgfoot">

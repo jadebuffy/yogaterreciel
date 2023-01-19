@@ -106,6 +106,15 @@ footer i {
     margin-top: 99px;
     font-size: 14px;
     color: #424242;
+
+    a {
+        text-decoration: underline;
+        color: #424242;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
 }
 
 .copyright span {

@@ -24,6 +24,8 @@
 }
 
 
+
+
 .error {
     display: flex;
     justify-content: space-between;
@@ -32,6 +34,8 @@
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
+
+
 }
 
 .error article:nth-child(1){
@@ -41,6 +45,7 @@
     height: 480px;
     justify-content: center;
     margin-top: 7%;
+    margin-bottom: 120px;
     margin-left: 5%;
 }
 
@@ -48,12 +53,19 @@
     width: 80%;
 }
 
+.error h1{
+    font-size: 100px;
+    color: white;
+}
+
 .error h1, .error h2 {
     font-family: "Antic";
 }
 
-p {
+.error p {
     font-family: "Montserrat";
+    line-height: 23px;
+    font-size: 20px;
 }
 
 .error img:nth-child(2){
@@ -61,5 +73,4 @@ p {
     z-index: -10;
     width: 40%;
     left: 48%;
-    top: 30%;
 }

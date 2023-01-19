@@ -2,7 +2,7 @@ nav {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: rgba($color: $grisfonce, $alpha: 0.1);
+    background-color: rgba($color: white, $alpha: 0.1);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter:blur(2px);
     
@@ -38,16 +38,19 @@ nav {
 .nav-menu a {
     text-decoration: none;
     color: white;
+    height: 28px;
+}
+
+.nav-menu a:hover {
+    border-bottom: 2px solid white;
 }
 
 .current-menu-item {
-    border-bottom: 4px solid white;
-    border-radius: 20px;
+    border-bottom: 2px solid white;
 }
 
 .current_page_item {
-    border-bottom: 4px solid white;
-    border-radius: 2px;
+    border-bottom: 2px solid white;
 }
 
 .titre {

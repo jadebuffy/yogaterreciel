@@ -35,11 +35,15 @@
         <!--FIN SLIDER-->
     </article>
     <article class="med" id="meditation">
-        <div class="video">
-            <video controls width=100%>
-                <source src="<?php the_field("video_med"); ?>" type="video/mp4">
-            </video>
-        </div>
+        <?php if (get_field('video_med')) : ?>
+            <div class="video">
+                <video controls width=100%>
+                    <source src="<?php the_field("video_med"); ?>" type="video/mp4">
+                </video>
+            </div>
+        <?php else: ?>
+            <p class="else">Contenu disponible prochainement</p>
+        <?php endif ?>
         <div class="desc">
             <div class="t">
                 <h3><?php the_field("title"); ?></h3>
@@ -47,7 +51,7 @@
             </div>
             <div class="paragraphe">
                 <p><?php the_field("description"); ?></p>
-                <a href=""><button class="bouton">Je suis intéressé.e</button></a>
+                <a href="http://www.yoga-terre-ciel.com/formulaire"><button class="bouton">Je suis intéressé.e</button></a>
             </div>
         </div>
     </article>
@@ -81,21 +85,22 @@
             $('.customer-logos').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
-                autoplay: false,
+                autoplay: true,
+                autoplaySpeed: 1500,
                 prevArrow: '<button type="button" class="slick-prev"><img src="../wp-content/themes/yogaterreciel/assets/images/arrowleft.svg"/></button>',
                 nextArrow: '<button type="button" class="slick-next"><img src="../wp-content/themes/yogaterreciel/assets/images/arrowright.svg"/></button>',
                 arrows: true,
                 dots: false,
-                pauseOnHover: false,
+                pauseOnHover: true,
                 responsive: [{
                     breakpoint: 768,
                     settings: {
-                        slidesToShow: 2
+                        slidesToShow: 1
                     }
                 }, {
                     breakpoint: 520,
                     settings: {
-                        slidesToShow: 2
+                        slidesToShow: 1
                     }
                 }]
             });

@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
-    <title><?php echo(get_the_title()); ?></title>
+    <link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri() ?>/assets/images/favicon.svg" />
+    <title><?php echo(get_the_title()); ?> - Yoga Terre-Ciel</title>
     <?php wp_head(); ?>
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: white; 
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #CAB0AC; 
+            border-radius: 3px;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9C7973; 
+        }
+
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+  </style>
 </head>
 <body>
     <?php

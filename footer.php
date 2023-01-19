@@ -4,10 +4,10 @@
                     <h5>Me contacter</h5>
                     <div class="contacter">
                         <span> 
-                            <a href="tel:+33620590805"><i class="tel"></i><?php the_field('num_footer', 'option'); ?></a>
+                            <a href="tel:<?php the_field('num_footer', 'option'); ?>"><i class="tel"></i><?php the_field('num_footer', 'option'); ?></a>
                         </span>
                         <span>   
-                            <a href="mailto:deonne.parker@gmail.com"><i class="mail"></i><?php the_field('mail_footer', 'option'); ?></a>
+                            <a href="mailto:<?php the_field('mail_footer', 'option'); ?>"><i class="mail"></i><?php the_field('mail_footer', 'option'); ?></a>
                         </span>
                     </div>
                 </div>
@@ -16,10 +16,10 @@
                     <h5>Réseaux</h5>
                     <div class="reseaux">
                         <span>
-                            <a href=""><i class="fb"></i><?php the_field('facebook_compte', 'option'); ?></a>
+                            <a href="<?php the_field('fb_url', 'option'); ?>" target="_blank"><i class="fb"></i><?php the_field('facebook_compte', 'option'); ?></a>
                         </span>
                         <span>
-                            <a href=""><i class="insta"></i><?php the_field('instagram_compte', 'option'); ?></a>
+                            <a href="<?php the_field('insta_url', 'option'); ?>" target="_blank"><i class="insta"></i><?php the_field('instagram_compte', 'option'); ?></a>
                         </span>
                     </div>
                 </div>

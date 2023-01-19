@@ -34,6 +34,7 @@
         margin-top: 4%;
         color: $grisfonce;
         font-size: 14px;
+        font-family: 'Montserrat';
     }
 
     label {
@@ -60,5 +61,10 @@
         background-color: $taupe;
         font-family: 'Antic';
         border-radius: 2px;
+    }
+
+    div.wpforms-container-full .wpforms-form .wpforms-submit-container {
+        display: flex;
+        justify-content: center;
     }
 }

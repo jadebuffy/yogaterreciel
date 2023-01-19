@@ -79,11 +79,15 @@ h4 {
   margin-top: 2%;
 }
 
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
 nav {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: rgba(119, 119, 119, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(2px);
 }
@@ -115,16 +119,19 @@ nav {
 .nav-menu a {
   text-decoration: none;
   color: white;
+  height: 28px;
+}
+
+.nav-menu a:hover {
+  border-bottom: 2px solid white;
 }
 
 .current-menu-item {
-  border-bottom: 4px solid white;
-  border-radius: 20px;
+  border-bottom: 2px solid white;
 }
 
 .current_page_item {
-  border-bottom: 4px solid white;
-  border-radius: 2px;
+  border-bottom: 2px solid white;
 }
 
 .titre {
@@ -387,6 +394,12 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.else {
+  padding-top: 15%;
+  padding-left: 12%;
+  color: #9C7973;
 }
 
 .page-about article {
@@ -766,7 +779,7 @@ nav {
 .page-contact .title {
   margin-bottom: 25%;
 }
-.page-contact .t {
+.page-contact .ti {
   display: flex;
 }
 .page-contact .icone-contact {
@@ -1009,6 +1022,7 @@ nav {
   margin-top: 4%;
   color: #777777;
   font-size: 14px;
+  font-family: "Montserrat";
 }
 .page-form label {
   font-family: "Montserrat";
@@ -1031,6 +1045,10 @@ nav {
   background-color: #CAB0AC;
   font-family: "Antic";
   border-radius: 2px;
+}
+.page-form div.wpforms-container-full .wpforms-form .wpforms-submit-container {
+  display: flex;
+  justify-content: center;
 }
 
 footer {
@@ -1137,6 +1155,13 @@ footer i {
   font-size: 14px;
   color: #424242;
 }
+.copyright a {
+  text-decoration: underline;
+  color: #424242;
+}
+.copyright a:hover {
+  text-decoration: none;
+}
 
 .copyright span {
   margin-left: 10px;
@@ -1179,6 +1204,7 @@ footer i {
   height: 480px;
   justify-content: center;
   margin-top: 7%;
+  margin-bottom: 120px;
   margin-left: 5%;
 }
 
@@ -1186,12 +1212,19 @@ footer i {
   width: 80%;
 }
 
+.error h1 {
+  font-size: 100px;
+  color: white;
+}
+
 .error h1, .error h2 {
   font-family: "Antic";
 }
 
-p {
+.error p {
   font-family: "Montserrat";
+  line-height: 23px;
+  font-size: 20px;
 }
 
 .error img:nth-child(2) {
@@ -1199,7 +1232,6 @@ p {
   z-index: -10;
   width: 40%;
   left: 48%;
-  top: 30%;
 }
 
 /*# sourceMappingURL=app.css.map */
