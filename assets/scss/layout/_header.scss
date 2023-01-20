@@ -19,34 +19,11 @@ nav {
     
 }
 
-.checkbox {
-    display: block;
-    width: 200px;
-    height: 40px;
-    position: absolute;
-    left: 0;
-    cursor: pointer;
-    opacity: 0; 
-    z-index: 2; 
-    -webkit-touch-callout: none;
-
-}
-
-.hamburger {
+.nav-toggle {
     display: none;
-    cursor: pointer;
-}
+  }
 
-.bar {
-	display: block;
-    width: 45px;
-    height: 5px;
-    margin: 8px auto;
-    border-radius: 15px;
-    background-color: white;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
+
 
 
 .nav-menu {
@@ -115,7 +92,7 @@ nav {
     font-family: "Marcellus";
 }
 
-.head div span {
+.head .titre span {
     display: flex;
     justify-content: end;
     margin-top: -10px;
