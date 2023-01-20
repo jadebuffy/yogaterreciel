@@ -1302,10 +1302,9 @@ footer i {
     width: 100%;
   }
   .bouton {
-    margin-left: 8%;
-    margin-right: auto;
-    width: 320px;
-    height: 100px;
+    margin-left: 25%;
+    width: 280px;
+    height: 80px;
     font-size: 25px;
   }
   .page-home .cours-images a {
@@ -1389,7 +1388,7 @@ footer i {
     flex-direction: column;
     width: 100%;
     text-align: center;
-    background-color: #F4E6D6;
+    background-color: #CAB0AC;
     transition: 0.3s;
     z-index: 6;
   }
@@ -1424,7 +1423,7 @@ footer i {
     border-radius: 10px;
     left: 8px;
     width: 48px;
-    height: 8px;
+    height: 6.5px;
     background-color: white;
     transition: all 0.2s ease;
   }
@@ -1498,7 +1497,11 @@ footer i {
     margin-top: 2%;
   }
   .titre {
-    margin-left: 8%;
+    margin-left: 25%;
+    padding-top: 25%;
+  }
+  .page-contact .ti {
+    margin-top: 10%;
   }
 }
 
