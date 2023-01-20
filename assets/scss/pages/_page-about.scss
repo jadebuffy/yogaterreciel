@@ -6,7 +6,15 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 125px;
+        position: relative;
     }
+}
+
+.illu3 {
+    position: absolute;
+    left: 0;
+    top: 1430px;
+    z-index: -5;
 }
 
 .desc {

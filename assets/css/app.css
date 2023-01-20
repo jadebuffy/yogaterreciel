@@ -83,6 +83,15 @@ p {
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -90,6 +99,34 @@ nav {
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(2px);
+}
+
+.checkbox {
+  display: block;
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 45px;
+  height: 5px;
+  margin: 8px auto;
+  border-radius: 15px;
+  background-color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-menu {
@@ -167,6 +204,17 @@ nav {
   color: white;
 }
 
+.down {
+  animation: flo 2s infinite 0s;
+  margin-top: 25%;
+  margin-left: 50%;
+}
+
+@keyframes flo {
+  50% {
+    transform: translateY(-30px);
+  }
+}
 .imgfoot {
   display: flex;
   width: 50%;
@@ -207,6 +255,9 @@ nav {
   margin-top: 96px;
   margin-bottom: 65px;
 }
+.page-home .cours-images {
+  position: relative;
+}
 .page-home .cours-images h2 {
   width: 450px;
   background-image: url(../images/coursimage.png);
@@ -237,6 +288,17 @@ nav {
   background-image: url(../images/icone-meditation.png);
   background-size: cover;
   background-position: center;
+}
+.page-home .illu1 {
+  position: absolute;
+  left: 0;
+  top: 2030px;
+}
+.page-home .illu2 {
+  position: absolute;
+  right: -122px;
+  top: 70%;
+  z-index: -2;
 }
 .page-home .creneaux img {
   display: flex;
@@ -409,6 +471,14 @@ nav {
   margin-left: auto;
   margin-right: auto;
   margin-top: 125px;
+  position: relative;
+}
+
+.illu3 {
+  position: absolute;
+  left: 0;
+  top: 1430px;
+  z-index: -5;
 }
 
 .desc {
@@ -618,7 +688,7 @@ nav {
 .video {
   width: 60%;
   display: flex;
-  align-items: end;
+  align-items: center;
 }
 
 .page-jewerlies2 {
@@ -1214,7 +1284,7 @@ footer i {
 
 .error h1 {
   font-size: 100px;
-  color: white;
+  color: #F4E6D6;
 }
 
 .error h1, .error h2 {
@@ -1232,6 +1302,195 @@ footer i {
   z-index: -10;
   width: 40%;
   left: 48%;
+}
+
+@media only screen and (max-width: 768px) {
+  .head h1 {
+    font-size: 75px;
+    width: 300px;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .desc {
+    width: 100%;
+    font-size: 20px;
+  }
+  .illu1, .illu2, .illu3 {
+    display: none;
+    opacity: 0;
+  }
+  .video {
+    width: 100%;
+  }
+  .bouton {
+    margin-left: 8%;
+    margin-right: auto;
+    width: 320px;
+    height: 100px;
+    font-size: 25px;
+  }
+  .page-home .cours-images a {
+    margin-left: 0;
+  }
+  h2 {
+    font-size: 70px;
+    width: 180px;
+  }
+  .page-home .creneaux h2 {
+    font-size: 65px;
+    width: 380px;
+  }
+  .page-home h2 {
+    width: 350px;
+  }
+  .page-jewerlies1 h2 {
+    font-size: 65px;
+    width: 420px;
+  }
+  .page-home .cours-images h2 {
+    width: 320px;
+  }
+  .photo {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .page-gallerie .gallerie_video {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  .down {
+    display: none;
+  }
+  .page-home .creneaux_cours {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  p {
+    font-size: 20px;
+  }
+  .page-home .creneaux_cours a {
+    font-size: 20px;
+  }
+  .page-home .top p:nth-child(3) {
+    font-size: 35px;
+  }
+  .page-home .creneaux img {
+    width: 100%;
+  }
+  .imgfoot {
+    width: 100%;
+  }
+  .page-form .formulaire {
+    width: 100%;
+  }
+  .error {
+    flex-direction: column;
+  }
+  .error img:nth-child(2) {
+    left: 30%;
+  }
+  .nav-menu {
+    position: fixed;
+    left: -120%;
+    top: 70px;
+    gap: 20px;
+    padding: 24px 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    transition: 0.3s;
+    z-index: 6;
+  }
+  .nav-menu li {
+    margin: 16px 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .titre {
+    width: 300px;
+  }
+  .head p {
+    font-size: 50px;
+    margin-top: -10px;
+  }
+  .head div span {
+    font-size: 20px;
+    margin-top: 0;
+    width: 10%;
+    margin-right: 0;
+    margin-left: 70%;
+  }
+  nav input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  nav input:checked .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  nav input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+  }
+  nav input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  nav input:checked ~ ul {
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    left: 100;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-contact hr {
+    display: none;
+  }
+  footer {
+    background-image: none;
+    background-color: #EFEFEF;
+    height: auto;
+    padding-bottom: 7%;
+  }
+  .w {
+    width: 100%;
+  }
+  .contacter, .reseaux {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    height: 20px;
+    line-height: 50px;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+  .tel {
+    width: 24px;
+    height: 24px;
+  }
+  .mail {
+    width: 32px;
+    height: 24px;
+    margin-top: 2%;
+  }
+  .fb {
+    width: 24px;
+    height: 24px;
+    margin-top: 2%;
+  }
+  .insta {
+    width: 24px;
+    height: 24px;
+    margin-top: 2%;
+  }
+  .titre {
+    margin-left: 8%;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

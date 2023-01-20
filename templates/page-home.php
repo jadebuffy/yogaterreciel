@@ -28,7 +28,7 @@
         <!--VIDEO-->
         <div class="video">
             <video controls width=100%>
-                <source src="<?php the_field("video_hatha"); ?>" type="video/mp4">
+                <source src="<?php the_field("video_hatha"); ?>" type="video/mp4" alt="vidéo de présentation par Deonne Parker">
             </video>
         </div>
     </article>
@@ -38,7 +38,7 @@
             <?php if( get_field("video_med")) : ?>
                 <div class="video">
                     <video controls width=100%>
-                        <source src="<?php the_field("video_med"); ?>" type="video/mp4">
+                        <source src="<?php the_field("video_med"); ?>" type="video/mp4" alt="vidéo sur les méditations guidées">
                     </video>
                 </div>
             <?php else: ?>
@@ -55,6 +55,7 @@
                     <a href="http://www.yoga-terre-ciel.com/creations/#meditation"><button class="bouton">Plus de méditations</button></a>
                 </div>
             </div>
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/illu1.jpg" class="illu1" alt="Illustration d'arbre à l'encre de Chine"/>
     </article>
     <article class="cours-images">
         <!--LE COURS EN IMAGE-->
@@ -65,14 +66,14 @@
                 <div class="customer-logos slider">
                     <?php while ( have_rows( 'container' ) ) : the_row(); ?>
                     <?php $imagecrea = get_sub_field('images_illustrations'); ?>
-                        <div class="slide"><img src="<?php echo($imagecrea); ?>"></div>
+                        <div class="slide"><img src="<?php echo($imagecrea); ?>" alt="Photos/illustrations des cours de yoga"></div>
                     <?php endwhile; ?>
                 </div>
             </div>
         <?php endif; ?>
         <!--FIN SLIDER-->
         <a href="http://www.yoga-terre-ciel.com/galerie/#photo"><button class="bouton">Plus de photos</button></a>
-        
+        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/illu2.jpg"  class="illu2" alt="illustration d'arbre à l'encre de chine"/>
     </article>
     <article class="creneaux">
         <!--CRENEAUX-->
@@ -108,7 +109,7 @@
         </div>
         <?php endif; ?>
         <!--FIN GRID-->
-        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/bas.png"/>
+        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/bas.png" alt="série de 3 bonhommes peint à l'encre de Chine"/>
     </article>
     <article class="tarifs">
         <!--TARIFS-->
@@ -129,7 +130,7 @@
                     </div>
                     <div>
                         <i class="schedule"></i>
-                        <p>créneau au choix</p>
+                        <p><?php the_field("price_year_duree"); ?></p>
                     </div>
                     <div>
                         <i class="money"></i>
@@ -154,7 +155,7 @@
                     </div>
                     <div>
                         <i class="schedule"></i>
-                        <p>créneau au choix</p>
+                        <p><?php the_field("price_tri_duree"); ?></p>
                     </div>
                     <div>
                         <i class="money"></i>
@@ -179,7 +180,7 @@
                     </div>
                     <div>
                         <i class="schedule"></i>
-                        <p>créneau au choix</p>
+                        <p><?php the_field("price_duree"); ?></p>
                     </div>
                     <div>
                         <i class="money"></i>
@@ -190,7 +191,7 @@
         </div>
         <!--FIN GRID-->
     </article>
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerHome.png" class="imgfoot">
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerHome.png" class="imgfoot" alt="série de 3 bonhommes peint à l'encre de Chine">
 </section>
 <script>
     $(window).bind("load", function() {
@@ -201,8 +202,8 @@
                 infinite: true,
                 autoplay: true,
                 autoplaySpeed: 2000,
-                prevArrow: '<button type="button" class="slick-prev"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/arrowleft.svg"/></button>',
-                nextArrow: '<button type="button" class="slick-next"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/arrowright.svg"/></button>',
+                prevArrow: '<button type="button" class="slick-prev"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/arrowleft.svg" alt="flèche à gauche"/></button>',
+                nextArrow: '<button type="button" class="slick-next"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/arrowright.svg" alt="flèche à droite"/></button>',
                 arrows: true,
                 dots: false,
                 pauseOnHover: true,

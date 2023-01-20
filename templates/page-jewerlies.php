@@ -26,8 +26,12 @@
         <?php if( have_rows( 'container' ) ):  ?>
                 <div class="customer-logos slider">
                     <?php while ( have_rows( 'container' ) ) : the_row(); ?>
-                    <?php $imagecrea = get_sub_field('imagescrea'); ?>
-                        <div class="slide"><img src="<?php echo($imagecrea); ?>"></div>
+                    <?php $imagescrea = get_sub_field('imagescrea'); ?>
+                        <div class="slide">
+                            <a href="<?php echo esc_url($imagescrea['url']); ?>">
+                                <img src="<?php echo esc_url($imagescrea['sizes']['slider']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                            </a>
+                        </div>
                     <?php endwhile; ?>
                 </div>
             </div>
@@ -38,7 +42,7 @@
         <?php if (get_field('video_med')) : ?>
             <div class="video">
                 <video controls width=100%>
-                    <source src="<?php the_field("video_med"); ?>" type="video/mp4">
+                    <source src="<?php the_field("video_med"); ?>" type="video/mp4" alt="vidéo de méditation guidée">
                 </video>
             </div>
         <?php else: ?>
@@ -68,7 +72,11 @@
                 <div class="customer-logos slider">
                     <?php while ( have_rows( 'containerb' ) ) : the_row(); ?>
                     <?php $imagecrea = get_sub_field('images_bijoux'); ?>
-                        <div class="slide"><img src="<?php echo($imagecrea); ?>"></div>
+                        <div class="slide">
+                            <a href="<?php echo esc_url($imagecrea['url']); ?>">
+                                <img src="<?php echo esc_url($imagecrea['sizes']['slider']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                            </a>
+                        </div>
                     <?php endwhile; ?>
                 </div>
             </div>
@@ -76,7 +84,7 @@
         <!--FIN SLIDER-->
 
     </article>
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerJewerlies.png" class="imgfoot"/>
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerJewerlies.png" class="imgfoot" alt="série de 3 bonhommes peint à l'encre de Chine"/>
 </section>
 
 <script>
@@ -104,7 +112,7 @@
                     }
                 }]
             });
-        }, "10");
+        }, "1");
         
     });
 </script>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri() ?>/assets/images/favicon.svg" />
+    <link rel="icon" type="image/svg" href="<?php echo get_stylesheet_directory_uri() ?>/assets/images/favicon.svg" alt="favicon"/>
     <title><?php echo(get_the_title()); ?> - Yoga Terre-Ciel</title>
     <?php wp_head(); ?>
     <style>
@@ -27,10 +27,6 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #9C7973; 
         }
-
-        ::-webkit-scrollbar-button {
-            display: none;
-        }
   </style>
 </head>
 <body>
@@ -45,7 +41,13 @@
 	background-size: cover; 
 	background-position: center;">
         <nav role="navigation">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg">
+            <input type="checkbox" class="checkbox"/>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>	
+            </div>
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt="Logo Yoga Terre-Ciel">
             <div class="nav-menu">
                 <?php wp_nav_menu(array('theme_location' => 'primary_menu')); ?>
             </div>
@@ -54,5 +56,6 @@
             <h1>Yoga<br><p>Terre-Ciel</p></h1>
             <span>Chambéry</span>
         </div>
+        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/arroowdown.png" alt="flèche vers le bas" class="down">
     </header>
     

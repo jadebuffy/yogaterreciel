@@ -47,14 +47,14 @@
             <?php while ( have_rows( 'gallerie_video' ) ) : the_row(); ?>
             <div class="videos">
                 <video controls width=100%>
-                    <source src="<?php the_sub_field( 'videos' );?>" type="video/mp4">
+                    <source src="<?php the_sub_field( 'videos' );?>" type="video/mp4" alt="vidéo de la gallerie">
                 </video>
             </div>
             <?php endwhile; ?>
         </div>
         <?php endif; ?>
     </article>
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerGallerie.png" class="imgfoot">
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerGallerie.png" class="imgfoot" alt="Série de 3 postures de yoga à l'encre de Chine" >
 </section>   
     
 

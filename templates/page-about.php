@@ -51,7 +51,7 @@
             <p><?php the_field("legende");?></p>
         </div>
     </article>
-
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/illu3.jpg"  class="illu3" alt="Illustration d'arbre à l'encre de Chine"/>
     <!--A PROPOS-->
     <article>
         <!--PHOTO-->

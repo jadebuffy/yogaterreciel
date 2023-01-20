@@ -27,7 +27,7 @@
             <div class="copyright">
                 <span>&copy;<?php echo(date('Y')); ?></span>
                 <span>Tous droits réservés</span>
-                <span><a href="http://localhost/wordpress/mentions-legales">Mentions légales</a></span>
+                <span><a href="http://www.yoga-terre-ciel.com/mentions-legales">Mentions légales</a></span>
             </div>
         </footer>
         <?php wp_footer();?>
