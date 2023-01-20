@@ -40,13 +40,13 @@
     background-repeat: no-repeat;
 	background-size: cover; 
 	background-position: center;">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
         <nav role="navigation">
-            <input type="checkbox" class="checkbox"/>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>	
-            </div>
             <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt="Logo Yoga Terre-Ciel">
             <div class="nav-menu">
                 <?php wp_nav_menu(array('theme_location' => 'primary_menu')); ?>
