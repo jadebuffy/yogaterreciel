@@ -29,7 +29,7 @@
                     <?php $imagescrea = get_sub_field('imagescrea'); ?>
                         <div class="slide">
                             <a href="<?php echo esc_url($imagescrea['url']); ?>">
-                                <img src="<?php echo esc_url($imagescrea['sizes']['slider']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                                <img src="<?php echo esc_url($imagescrea['sizes']['slider']); ?>" alt="<?php echo esc_attr($imagescrea['alt']); ?>">
                             </a>
                         </div>
                     <?php endwhile; ?>
@@ -74,7 +74,7 @@
                     <?php $imagecrea = get_sub_field('images_bijoux'); ?>
                         <div class="slide">
                             <a href="<?php echo esc_url($imagecrea['url']); ?>">
-                                <img src="<?php echo esc_url($imagecrea['sizes']['slider']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                                <img src="<?php echo esc_url($imagecrea['sizes']['slider']); ?>" alt="<?php echo esc_attr($imagecrea['alt']); ?>" loading="lazy">
                             </a>
                         </div>
                     <?php endwhile; ?>
@@ -84,7 +84,7 @@
         <!--FIN SLIDER-->
 
     </article>
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerJewerlies.png" class="imgfoot" alt="série de 3 bonhommes peint à l'encre de Chine"/>
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerJewerlies.png" class="imgfoot" alt="série de 3 bonhommes peint à l'encre de Chine" loading="lazy"/>
 </section>
 
 <script>
@@ -113,7 +113,6 @@
                 }]
             });
         }, "1");
-        
     });
 </script>
 

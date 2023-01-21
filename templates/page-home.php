@@ -38,7 +38,7 @@
             <?php if( get_field("video_med")) : ?>
                 <div class="video">
                     <video controls width=100%>
-                        <source src="<?php the_field("video_med"); ?>" type="video/mp4" alt="vidéo sur les méditations guidées">
+                        <source src="<?php the_field("video_med"); ?>" type="video/mp4" alt="vidéo sur les méditations guidées" loading="lazy">
                     </video>
                 </div>
             <?php else: ?>
@@ -55,7 +55,7 @@
                     <a href="http://www.yoga-terre-ciel.com/creations/#meditation"><button class="bouton">Plus de méditations</button></a>
                 </div>
             </div>
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/illu1.jpg" class="illu1" alt="Illustration d'arbre à l'encre de Chine"/>
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/illu1.jpg" class="illu1" alt="Illustration d'arbre à l'encre de Chine" loading="lazy"/>
     </article>
     <article class="cours-images">
         <!--LE COURS EN IMAGE-->
@@ -66,14 +66,14 @@
                 <div class="customer-logos slider">
                     <?php while ( have_rows( 'container' ) ) : the_row(); ?>
                     <?php $imagecrea = get_sub_field('images_illustrations'); ?>
-                        <div class="slide"><img src="<?php echo($imagecrea); ?>" alt="Photos/illustrations des cours de yoga"></div>
+                        <div class="slide"><img src="<?php echo($imagecrea); ?>" alt="Photos/illustrations des cours de yoga" loading="lazy"></div>
                     <?php endwhile; ?>
                 </div>
             </div>
         <?php endif; ?>
         <!--FIN SLIDER-->
-        <a href="http://www.yoga-terre-ciel.com/galerie/#photo"><button class="bouton">Plus de photos</button></a>
-        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/illu2.jpg"  class="illu2" alt="illustration d'arbre à l'encre de chine"/>
+        <a href="http://www.yoga-terre-ciel.com/galerie/#photo"><button class="bouton">Plus de photos</button></a> 
+        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/illu2.jpg"  class="illu2" alt="illustration d'arbre à l'encre de chine" loading="lazy"/>
     </article>
     <article class="creneaux">
         <!--CRENEAUX-->
@@ -109,7 +109,7 @@
         </div>
         <?php endif; ?>
         <!--FIN GRID-->
-        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/bas.png" alt="série de 3 bonhommes peint à l'encre de Chine"/>
+        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/bas.png" alt="série de 3 bonhommes peint à l'encre de Chine" loading="lazy"/>
     </article>
     <article class="tarifs">
         <!--TARIFS-->
@@ -180,7 +180,7 @@
                     </div>
                     <div>
                         <i class="schedule"></i>
-                        <p><?php the_field("price_duree"); ?></p>
+                        <p><?php the_field("priceduree"); ?></p>
                     </div>
                     <div>
                         <i class="money"></i>
@@ -191,7 +191,7 @@
         </div>
         <!--FIN GRID-->
     </article>
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerHome.png" class="imgfoot" alt="série de 3 bonhommes peint à l'encre de Chine">
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerHome.png" class="imgfoot" alt="série de 3 bonhommes peint à l'encre de Chine" loading="lazy">
 </section>
 <script>
     $(window).bind("load", function() {
@@ -219,7 +219,7 @@
                     }
                 }]
             });
-        }, "10");
+        }, "1");
         
     });
 </script>

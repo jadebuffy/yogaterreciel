@@ -52,6 +52,26 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "Antic";
+  src: url(../fonts/AnticDidone-Regular.ttf);
+}
+@font-face {
+  font-family: "Wild";
+  src: url(../fonts/Wild-Child.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-Gras";
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "Marcellus";
+  src: url(../fonts/MarcellusSC-Regular.ttf);
+}
 h1 {
   font-size: 80px;
   margin-top: 0;
@@ -182,7 +202,7 @@ nav {
 
 .down {
   animation: flo 2s infinite 0s;
-  margin-top: 25%;
+  margin-top: 22%;
   margin-left: 50%;
 }
 
@@ -691,9 +711,12 @@ nav {
 }
 .container .slick-slide {
   margin: 0px 20px;
+  flex-grow: 1;
 }
 .container .slick-slide img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .container .slick-slider {
   position: relative;
@@ -1213,26 +1236,6 @@ footer i {
   margin-left: 10px;
 }
 
-@font-face {
-  font-family: "Antic";
-  src: url(../fonts/AnticDidone-Regular.ttf);
-}
-@font-face {
-  font-family: "Wild";
-  src: url(../fonts/Wild-Child.ttf);
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url(../fonts/Montserrat-Regular.ttf);
-}
-@font-face {
-  font-family: "Montserrat-Gras";
-  src: url(../fonts/Montserrat-Medium.ttf);
-}
-@font-face {
-  font-family: "Marcellus";
-  src: url(../fonts/MarcellusSC-Regular.ttf);
-}
 .error {
   display: flex;
   justify-content: space-between;
@@ -1285,89 +1288,10 @@ footer i {
     font-size: 75px;
     width: 300px;
   }
-  article {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .desc {
-    width: 100%;
-    font-size: 20px;
-  }
-  .illu1, .illu2, .illu3 {
-    display: none;
-    opacity: 0;
-  }
-  .video {
-    width: 100%;
-  }
-  .bouton {
-    margin-left: 25%;
-    width: 280px;
-    height: 80px;
-    font-size: 25px;
-  }
-  .page-home .cours-images a {
-    margin-left: 0;
-  }
-  h2 {
-    font-size: 70px;
-    width: 180px;
-  }
-  .page-home .creneaux h2 {
-    font-size: 65px;
-    width: 380px;
-  }
-  .page-home h2 {
-    width: 350px;
-  }
-  .page-jewerlies1 h2 {
-    font-size: 65px;
-    width: 420px;
-  }
-  .page-home .cours-images h2 {
-    width: 320px;
-  }
-  .photo {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .page-gallerie .gallerie_video {
-    grid-template-columns: repeat(1, 1fr);
-    width: 100%;
-  }
-  .down {
-    display: none;
-  }
-  .page-home .creneaux_cours {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  p {
-    font-size: 20px;
-  }
-  .page-home .creneaux_cours a {
-    font-size: 20px;
-  }
-  .page-home .top p:nth-child(3) {
-    font-size: 35px;
-  }
-  .page-home .creneaux img {
-    width: 100%;
-  }
-  .imgfoot {
-    width: 100%;
-  }
-  .page-form .formulaire {
-    width: 100%;
-  }
-  .error {
-    flex-direction: column;
-  }
-  .error img:nth-child(2) {
-    left: 30%;
-  }
   .titre {
     width: 300px;
+    margin-left: 25%;
+    padding-top: 25%;
   }
   .head p {
     font-size: 50px;
@@ -1452,18 +1376,88 @@ footer i {
     transform: translate(100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
-  .footer-contact {
+  article {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
-  .footer-contact hr {
+  h2 {
+    font-size: 70px;
+    width: 180px;
+  }
+  p {
+    font-size: 20px;
+  }
+  .bouton {
+    margin-left: 25%;
+    width: 280px;
+    height: 80px;
+    font-size: 25px;
+  }
+  .page-home .paragraphe a {
+    display: flex;
+    justify-content: center;
+  }
+  .desc {
+    width: 100%;
+    font-size: 20px;
+  }
+  .illu1, .illu2, .illu3 {
+    display: none;
+    opacity: 0;
+  }
+  .video {
+    width: 100%;
+  }
+  .page-home .cours-images a {
+    text-decoration: none;
+    color: black;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .page-home .creneaux h2 {
+    font-size: 65px;
+    width: 360px;
+  }
+  .page-home h2 {
+    width: 350px;
+  }
+  .page-jewerlies1 h2 {
+    font-size: 65px;
+    width: 420px;
+  }
+  .page-home .cours-images h2 {
+    width: 320px;
+  }
+  .photo {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .page-gallerie .gallerie_video {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  .down {
     display: none;
   }
-  footer {
-    background-image: none;
-    background-color: #EFEFEF;
-    height: auto;
-    padding-bottom: 7%;
+  .page-home .creneaux_cours {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .page-home .creneaux_cours a {
+    font-size: 20px;
+  }
+  .page-home .top p:nth-child(3) {
+    font-size: 35px;
+  }
+  .page-home .creneaux img {
+    width: 100%;
+  }
+  .imgfoot {
+    width: 100%;
+  }
+  .page-form .formulaire {
+    width: 100%;
   }
   .w {
     width: 100%;
@@ -1496,12 +1490,91 @@ footer i {
     height: 24px;
     margin-top: 2%;
   }
-  .titre {
-    margin-left: 25%;
-    padding-top: 25%;
-  }
   .page-contact .ti {
     margin-top: 10%;
+  }
+  .else {
+    text-align: center;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-contact hr {
+    display: none;
+  }
+  footer {
+    background-image: none;
+    background-color: #EFEFEF;
+    height: auto;
+    padding-bottom: 7%;
+  }
+  .error {
+    flex-direction: column;
+  }
+  .error img:nth-child(2) {
+    left: 30%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .head h1 {
+    font-size: 65px;
+    width: 250px;
+  }
+  .titre {
+    width: 250px;
+    margin-left: 20%;
+    padding-top: 25%;
+  }
+  .head p {
+    font-size: 40px;
+    margin-top: -10px;
+  }
+  .head .titre span {
+    font-size: 16px;
+    margin-top: 0;
+    width: 8%;
+    margin-right: 0;
+    margin-left: 70%;
+  }
+  h2 {
+    font-size: 60px;
+    width: 160px;
+  }
+  .bouton {
+    margin-left: 0;
+    width: 250px;
+    height: 70px;
+    font-size: 20px;
+  }
+  .page-home .creneaux h2 {
+    font-size: 45px;
+    width: 250px;
+  }
+  .page-home h2 {
+    font-size: 50px;
+    width: 210px;
+  }
+  .page-jewerlies1 h2 {
+    font-size: 50px;
+    width: 310px;
+  }
+  .page-jewerlies2 h2 {
+    width: 150px;
+  }
+  .page-home .cours-images h2 {
+    width: 210px;
+  }
+  .page-home .tarifs h2 {
+    width: 70px;
+  }
+  .page-home .paragraphe a {
+    display: flex;
+    justify-content: center;
+  }
+  .page-jewerlies1 .paragraphe a {
+    display: flex;
+    justify-content: center;
   }
 }
 

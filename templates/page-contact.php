@@ -57,7 +57,7 @@
             </div>
         </div>
     </article>
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerContact.png" class="imgfoot" alt="Série de 3 postures de yoga à l'encre de Chine">
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerContact.png" class="imgfoot" alt="Série de 3 postures de yoga à l'encre de Chine" loading="lazy">
 </section>
 
 <?php

@@ -47,7 +47,7 @@
             <img src="<?php echo($image["sizes"]["medium_large"]); ?>" 
                 height="<?php echo($image["sizes"]["medium_large-height"]); ?>"
                 width="<?php echo($image["sizes"]["medium_large-width"]); ?>"
-                alt="<?php echo($image["alt"]) ?>"/>
+                alt="<?php echo($image["alt"]) ?>" loading="lazy"/>
             <p><?php the_field("legende");?></p>
         </div>
     </article>
@@ -59,7 +59,7 @@
             <img src="<?php echo($image2["sizes"]["medium_large"]); ?>" 
                     height="<?php echo($image2["sizes"]["medium_large-height"]); ?>"
                     width="<?php echo($image2["sizes"]["medium_large-width"]); ?>"
-                    alt="<?php echo($image2["alt"]) ?>"/>
+                    alt="<?php echo($image2["alt"]) ?>" loading="lazy"/>
         </div>
         <!--TEXTE-->
         <div class="desc">
@@ -76,7 +76,7 @@
             </div>
         </div>
     </article>
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerAbout.png" class="imgfoot" alt="serie de postures de yoga "/>
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footerAbout.png" class="imgfoot" alt="serie de postures de yoga " loading="lazy"/>
 </section>
 <?php
 
